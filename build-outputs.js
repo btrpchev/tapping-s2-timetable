@@ -351,8 +351,12 @@ function buildHTML(reportHtml, vstats) {
   @media(max-width:768px){
     .wrap{padding:10px;}
     header.app .ttl h1{font-size:17px;} header.app .logo svg{height:40px;}
-    .mdaybtns{display:block;}
+    /* day switcher sits directly above the grid and stays pinned while scrolling it */
+    .mdaybtns{display:block;position:sticky;top:0;z-index:25;background:var(--bg-page);margin:0 0 8px;padding:8px 0 6px;box-shadow:0 6px 8px -6px rgba(0,0,0,.25);}
+    .mdaybtns button{margin-bottom:4px;}
     .gridwrap{max-height:none;}
+    /* small single-day grids: don't pin the header (the day bar is the pinned element) */
+    #teacher table.grid thead th,#class table.grid thead th,#subjects table.grid thead th,#overview table.grid thead th{position:static;}
     table.daygrid.mobile th,table.daygrid.mobile td{width:auto;}
     table.daygrid.mobile col.hide,table.daygrid.mobile .dcol.hide{display:none;}
   }
@@ -487,6 +491,16 @@ function teacherCell(tk,day,pid){
 }
 const isMobile=()=>window.innerWidth<=768;let mobileDay='Mon';
 const gridDays=()=>isMobile()?[mobileDay]:D.days;
+// On mobile, move the Mon-Fri day switcher to sit directly above the active grid
+// (so teachers don't scroll back past the teacher/class pickers to change day).
+function positionMdays(){const md=document.getElementById('mdays');if(!md)return;
+  const tb=document.getElementById('toolbar');
+  if(!isMobile()){tb.after(md);return;}
+  const v=(document.querySelector('#tabs button.active')||{}).dataset;const view=v?v.v:'';
+  const grid={teacher:'teacherGrid',class:'classGrid',subjects:'subjectGrid'}[view];
+  if(grid){const g=document.getElementById(grid);g.parentNode.insertBefore(md,g);}
+  else if(view==='overview'){const o=document.getElementById('overview');o.parentNode.insertBefore(md,o);}
+  else tb.after(md);}
 function gridHTML(cols,cellFn,colHdr){
   const tcls=cols.length<=7?'grid daygrid':'grid wide';
   let h='<div class="gridwrap"><table class="'+tcls+'"><thead><tr><th class="timecol">Period</th>'+cols.map(c=>'<th>'+colHdr(c)+'</th>').join('')+'</tr></thead><tbody>';
@@ -548,7 +562,7 @@ function renderSchool(){
 function renderClass(){const code=document.getElementById('classPick').value;const fn=isEce(code)?((d,pid)=>eceClassCell(code,d,pid)):((d,pid)=>wholeSchoolCell(code,d,pid));document.getElementById('classGrid').innerHTML=gridHTML(gridDays(),fn,d=>d);updatePrintTitle();}
 let curTeacher='';
 function renderTeacher(){const tk=curTeacher;const fn=tk.indexOf('ece:')===0?((d,pid)=>eceTeacherCell(tk.slice(4),d,pid)):((d,pid)=>teacherCell(tk,d,pid));document.getElementById('teacherDash').innerHTML=dashHTML(tk);document.getElementById('teacherGrid').innerHTML=gridHTML(gridDays(),fn,d=>d);document.querySelectorAll('#teacherBtns button').forEach(b=>b.classList.toggle('sel',b.dataset.tk===tk));updatePrintTitle();}
-function activate(v){document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('active',x.dataset.v===v));document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===v));document.body.classList.toggle('on-home',v==='home');window.scrollTo(0,0);updatePrintTitle();syncURL();}
+function activate(v){document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('active',x.dataset.v===v));document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===v));document.body.classList.toggle('on-home',v==='home');positionMdays();window.scrollTo(0,0);updatePrintTitle();syncURL();}
 function goClass(code){document.getElementById('classPick').value=code;renderClass();activate('class');}
 function goTeacher(tk){curTeacher=tk;renderTeacher();activate('teacher');}
 /* ---- shareable / bookmarkable deep links (URL hash) ---- */
@@ -658,7 +672,7 @@ document.querySelectorAll('#toolbar button.wk').forEach(b=>b.onclick=()=>{week=b
 const md=document.getElementById('mdays');
 D.days.forEach(d=>{const b=document.createElement('button');b.textContent=d;b.dataset.d=d;b.onclick=()=>{mobileDay=d;md.querySelectorAll('button').forEach(x=>x.classList.toggle('active',x.dataset.d===d));renderOverview();renderClass();renderTeacher();renderSubject();};md.appendChild(b);});
 md.querySelector('button').classList.add('active');
-let _rt;window.addEventListener('resize',()=>{clearTimeout(_rt);_rt=setTimeout(()=>{renderOverview();renderClass();renderTeacher();renderSubject();},150);});
+let _rt;window.addEventListener('resize',()=>{clearTimeout(_rt);_rt=setTimeout(()=>{renderOverview();renderClass();renderTeacher();renderSubject();positionMdays();},150);});
 // search: jump to any teacher or class
 const SEARCH=[];
 D.classes.forEach(c=>SEARCH.push({label:c.code+' ('+c.yrs+') class \\u00b7 '+c.teacher,go:()=>goClass(c.code),terms:(c.code+' '+c.teacher+' '+c.yrs).toLowerCase()}));
