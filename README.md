@@ -2,7 +2,7 @@
 
 Interactive whole-school specialist timetable (Kindy, Pre-Primary and Years 1–6).
 
-**Live site:** _(GitHub Pages URL appears here once enabled)_
+**Live site:** https://btrpchev.github.io/tapping-s2-timetable/ (link-shareable with staff; not search-indexed)
 
 ## What's here
 - `index.html` / `Tapping_S2_Specialist_Timetable.html` — the interactive app (open in any browser).
