@@ -1,0 +1,44 @@
+Solved (STEM doubles; PE Thu synchronised; max 2/class/day). valid=8 win=8 dottOK=8
+
+=== COLLABORATION WINDOWS ===
+  Y1       Wed P4  -> LA22/Carter, LA23/Peak, LA24/Walker
+  Y2       Thu P5  -> LA18/Lowndes, LA19/Bell, LA20/TBC
+  Y3-4     Thu P4  -> LA14/Lowndes, LA15/Bell, LA21/TBC
+  Y4-5     Thu P3  -> LA7/Lowndes, LA16/Bell, LA17/TBC
+  Y5-6     Thu P2  -> LA6/Lowndes, LA8/Bell, LA9/TBC
+  Arts     Wed P2  -> free: Peak, Carter, Walker
+  STEM/PE  Thu P1  -> free: Bell, Lowndes (+Uhe office)
+
+=== PERIOD 6 ===
+  Mon LA17  Visual Art      Carter
+  Mon LA22  Health          Lowndes
+  Tue LA14  Performing Arts Peak
+  Tue LA18  STEM            Lowndes
+  Tue LA20  Visual Art      Carter
+  Tue LA6   STEM            Uhe
+  Wed LA15  Performing Arts Peak
+  Wed LA21  Auslan          Walker
+  Wed LA23  Health          Lowndes
+  Wed LA7   STEM            Uhe
+  Wed LA9   Visual Art      Carter
+  Thu LA16  Auslan          Walker
+  Thu LA22  PE              Lowndes
+  Thu LA23  PE              Bell
+  Thu LA24  PE              TBC
+  Thu LA8   Performing Arts Peak
+  Fri LA18  Health          Lowndes
+  Fri LA19  Auslan          Peak
+  Fri LA24  Health          Bell
+
+=== LOAD & DOTT ===
+  Uhe      teach 12  DOTT  50m / 108m  
+  Lowndes  teach 26  DOTT 305m / 270m  OK
+  Carter   teach 15  DOTT 165m / 162m  OK
+  Peak     teach 20  DOTT 280m / 216m  OK
+  Walker   teach 10  DOTT 140m / 108m  OK
+  Bell     teach  6  DOTT 320m / 108m  OK
+  TBC      teach  5  DOTT  70m / 54m  OK
+
+VALIDATION: PASS
+
+Wrote solution.json
