@@ -208,6 +208,7 @@ function buildHTML(reportHtml, vstats) {
     ? `<div class="clog"><div class="cloghd">Recent updates</div>${CHANGELOG.slice(0, 5).map(c => `<div class="clogrow"><span class="clogdate">${esc(fmtDate(c.date))}</span><span class="clogtext">${esc(c.note)}</span></div>`).join("")}</div>`
     : "";
   return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Tapping Primary School: Semester 2 Timetable</title>
 <style>
   :root{
