@@ -13,7 +13,7 @@ const C = "class", D = "dott", O = "off";
 const rep = v => Array(7).fill(v);
 const split = (map, base = C) => PIDS.map((_, i) => map[i] !== undefined ? map[i] : base);
 
-const katieFri = split({ 6: C }, D);                 // P0-P5 dott (Nikki/Bell cover), P6 class (covers Nikki)
+const katieFri = split({ 5: C }, D);                 // P5 class (covers Nikki), rest dott; LA1 then needs external cover at P6 (Lis), keeping Fri P1 clear for assembly
 const nikkiFri = split({ 5: D, 6: D }, "cov:Katie Digney"); // P0-P4 cover Katie, P5 dott (Bell covers LA1), P6 dott
 const kellyMon = split({ 5: D, 6: D }, C);           // P5,P6 dott (Anita covers)
 const donnaMon = split({ 3: D, 4: D }, C);           // P3,P4 dott (Anita covers)
@@ -32,7 +32,7 @@ const eceTeachers = [
   { name: "Katie Digney", phase: "PP", room: "LA1", fte: 0.8,
     A: { Mon: rep(C), Tue: rep(C), Wed: rep(C), Thu: rep(O), Fri: katieFri },
     B: { Mon: rep(C), Tue: rep(C), Wed: rep(C), Thu: rep(O), Fri: katieFri },
-    note: "Job-share LA1 with Nikki Luca. Does NOT work Thursday. Fri P0-P5 DOTT (Nikki covers); teaches P6 to give Nikki DOTT." },
+    note: "Job-share LA1 with Nikki Luca. Does NOT work Thursday. Fri: DOTT except P5, where she teaches to give Nikki her P5 DOTT (Lis Lowndes covers LA1 at P6 for Nikki's other DOTT period)." },
   { name: "Nikki Luca", phase: "PP", room: "LA1", fte: 0.4,
     A: { Mon: rep(O), Tue: rep(O), Wed: rep(O), Thu: rep(C), Fri: nikkiFri },
     B: { Mon: rep(O), Tue: rep(O), Wed: rep(O), Thu: rep(C), Fri: nikkiFri },
@@ -67,14 +67,14 @@ const eceClasses = [
 
 const roomOf = name => (eceTeachers.find(t => t.name === name) || {}).room;
 
-// covers provided by NON-ECE staff (Year 1-6 specialists) into an ECE room.
-// `by` is the Year 1-6 specialist key; byName is for display.
-// Lis Lowndes uses her two free Friday DOTT periods to cover the ECE DOTT for
-// Fiona (T9) and Nikki (LA1). (In exchange, two of her grad-Health periods move
-// to Aaron Bell on Friday - handled in build-outputs.)
+// covers provided by NON-ECE staff into an ECE room.
+// `by` is the Year 1-6 specialist key (or "Relief" for a relief teacher); byName is for display.
+// Friday P1 is the whole-school assembly, so Lis Lowndes's Friday STEM fills P2-P5; that
+// leaves her only P6 free, which she uses to cover Nikki's LA1 DOTT. Fiona's T9 DOTT (P6)
+// can no longer be covered by Lis at the same time, so it is covered by a relief teacher.
 const externalCover = [
-  { room: "T9", day: "Fri", period: "P6", by: "Lowndes", byName: "Lis Lowndes", forName: "Fiona Dyer" },
-  { room: "LA1", day: "Fri", period: "P5", by: "Lowndes", byName: "Lis Lowndes", forName: "Nikki Luca" },
+  { room: "T9", day: "Fri", period: "P6", by: "Relief", byName: "Relief teacher", forName: "Fiona Dyer" },
+  { room: "LA1", day: "Fri", period: "P6", by: "Lowndes", byName: "Lis Lowndes", forName: "Nikki Luca" },
 ];
 
 // who is in `roomCode` at (day, period index, week 'A'|'B')

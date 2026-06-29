@@ -162,7 +162,7 @@ Whole-day ECE model (separate from the specialist grid). Kindy DOTT = 320 × FTE
 | --- | --- | --- | --- | --- | --- | --- |
 | Jenny Martin | PP | LA5 | 1 | 320m | 310m | -10m |
 | Caroline Parkin | PP | LA2 | 1 | 320m | 310m | -10m |
-| Katie Digney | PP | LA1 | 0.8 | 256m | 250m | -6m |
+| Katie Digney | PP | LA1 | 0.8 | 256m | 265m | +9m |
 | Nikki Luca | PP | LA1 | 0.4 | 128m | 105m | -23m |
 | Kelly Duggan | Kindy | LA4 | 0.8 | 256m | 260m | +4m |
 | Donna Campbell | Kindy | T10 | 0.8 | 256m | 245m | -11m |
