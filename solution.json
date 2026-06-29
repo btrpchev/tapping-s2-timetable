@@ -480,32 +480,32 @@
       "cls": "LA22",
       "subj": "STEM",
       "spec": "Lowndes",
-      "day": "Tue",
-      "period": "P3",
+      "day": "Mon",
+      "period": "P5",
       "room": "STEM Lab"
     },
     {
       "cls": "LA22",
       "subj": "STEM",
       "spec": "Lowndes",
+      "day": "Mon",
+      "period": "P6",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA23",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Tue",
+      "period": "P3",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA23",
+      "subj": "STEM",
+      "spec": "Lowndes",
       "day": "Tue",
       "period": "P4",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA23",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Mon",
-      "period": "P4",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA23",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Mon",
-      "period": "P5",
       "room": "STEM Lab"
     },
     {
@@ -688,7 +688,7 @@
       "cls": "LA23",
       "subj": "Visual Art",
       "spec": "Carter",
-      "day": "Tue",
+      "day": "Mon",
       "period": "P1",
       "room": "Art room"
     },

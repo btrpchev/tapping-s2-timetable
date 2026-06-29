@@ -18,10 +18,11 @@ Brief wording note: it refers in places to nine collaboration teams, but the enu
 
 ## 2. Period 6 reconciliation
 
-Period 6 lessons: 17 · 15 base class releases + 2 graduate Health. Some Health periods are deliberately off Period 6: the two leadership-release Healths (LA9, LA21) and two grad Healths (LA18, LA22) sit in Friday P2-P5 (Aaron Bell; P1 is the assembly), since Bell only has one P6 slot. Every Years 1-6 class still has a Period 6 release.
+Period 6 lessons: 18 · 16 base class releases + 2 graduate Health. Some Health periods are deliberately off Period 6: the two leadership-release Healths (LA9, LA21) and two grad Healths (LA18, LA22) sit in Friday P2-P5 (Aaron Bell; P1 is the assembly), since Bell only has one P6 slot. Every Years 1-6 class still has a Period 6 release.
 | Day | Class | Subject | Teacher | Type |
 | --- | --- | --- | --- | --- |
 | Mon | LA17 | Visual Art | Natalie Carter | base release |
+| Mon | LA22 | STEM | Lis Lowndes | base release |
 | Tue | LA14 | Performing Arts | Cheryl Peak | base release |
 | Tue | LA18 | STEM | Lis Lowndes | base release |
 | Tue | LA20 | Visual Art | Natalie Carter | base release |
@@ -52,7 +53,7 @@ All four leadership blocks placed: PASS. Each is a genuine extra 45-min release 
 
 ## 4. Monday P0 and P1 vacancy
 
-Monday P0 specialist lessons: 0. Monday P1 specialist lessons: 0. Clear of all specialist activity: PASS.
+Monday P0 specialist lessons: 0. Monday P1 specialist lessons: 1. Clear of all specialist activity: FAIL.
 
 ## 5. DOTT equity
 
@@ -60,7 +61,7 @@ P0 (25 min) counts toward DOTT, per Brad. Leadership blocks are reported separat
 | Specialist | FTE | Periods | DOTT (P0+free) | Target | Status |
 | --- | --- | --- | --- | --- | --- |
 | Chantel Uhe | 0.4 teach | 12 | 50m | 108m | by design (office days carry her DOTT) |
-| Lis Lowndes | 1.0 | 24 | 425m | 270m | OK |
+| Lis Lowndes | 1.0 | 24 | 410m | 270m | OK |
 | Natalie Carter | 0.6 | 15 | 165m | 162m | OK |
 | Cheryl Peak | 0.8 | 20 | 235m | 216m | OK |
 | Rachel Walker | 0.4 | 10 | 140m | 108m | OK |
@@ -81,7 +82,7 @@ Classroom teacher DOTT = minutes their class is with a specialist. Years 1-6 ent
 | LA19 | Savannah Espach |  | 285m | 270m | +15m (collaboration top-up) |
 | LA20 | Anna Hendron |  | 285m | 270m | +15m (collaboration top-up) |
 | LA21 | Jasper Sirr-Davis | OHS | 285m +45 lead | 270m | +15 collab top-up; +45 leadership (separate) |
-| LA22 | Imogen Webb | grad | 330m | 270m | +60m (grad extra Health) |
+| LA22 | Imogen Webb | grad | 345m | 270m | +75m (grad extra Health) |
 | LA23 | Ashlee Hutchings | grad | 345m | 270m | +75m (grad extra Health) |
 | LA24 | Chloe Moore | grad | 345m | 270m | +75m (grad extra Health) |
 Discretionary DOTT spread across the eleven non-graduate classes: 0 min (excludes leadership release). Leadership holders (Rose, Sirr-Davis) receive an extra 45-min Bell-covered Health period on top; graduates sit higher via their extra Health.
@@ -137,8 +138,8 @@ Hard rule (Brad): no class may receive more than two specialist periods on any s
 | LA19 | 0 | 1 | 2 | 2 | 1 | 2 |
 | LA20 | 2 | 2 | 0 | 1 | 1 | 2 |
 | LA21 | 0 | 0 | 2 | 2 | 3 | 3 (incl leadership) |
-| LA22 | 0 | 2 | 1 | 2 | 2 | 2 |
-| LA23 | 2 | 1 | 2 | 1 | 1 | 2 |
+| LA22 | 2 | 0 | 1 | 2 | 2 | 2 |
+| LA23 | 1 | 2 | 2 | 1 | 1 | 2 |
 | LA24 | 1 | 2 | 1 | 2 | 1 | 2 |
 Within the daily cap (2 per class, 3 for the two leadership classes on their leadership day): PASS.
 
@@ -153,7 +154,7 @@ PE (rule 6): all PE is on Thursday, with the three PE teachers (Lowndes, Bell, J
 | P5 | LA18, LA19, LA20 | Lowndes / Bell / Pevitt |
 | P6 | LA22, LA23, LA24 | Lowndes / Bell / Pevitt |
 STEM (rule 5): every STEM block is two back-to-back periods (consecutive period numbers, same day): PASS.
-Specialist teaching by period (rule 7 aims to keep mornings lighter for literacy): P1:7  P2:16  P3:18  P4:19  P5:19  P6:17. Note Thursday PE necessarily fills some morning slots; the rest of the week is pushed later where the other hard rules allow.
+Specialist teaching by period (rule 7 aims to keep mornings lighter for literacy): P1:7  P2:16  P3:18  P4:18  P5:19  P6:18. Note Thursday PE necessarily fills some morning slots; the rest of the week is pushed later where the other hard rules allow.
 
 ## 10. Pre-Primary & Kindy DOTT ledger
 
