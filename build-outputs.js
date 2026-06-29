@@ -103,7 +103,8 @@ const LEAD_CLASSES = ["LA9", "LA21"];
 const leadershipReleases = [];
 (function bellFriday() {
   const busy = new Set(L.filter(x => x.spec === "Bell" && x.day === "Fri").map(x => x.period)); // LA24 (P6)
-  const slots = ["P1", "P2", "P3", "P4", "P5"];
+  // Friday P1 is the whole-school assembly: no specialist lessons are placed there.
+  const slots = ["P2", "P3", "P4", "P5"];
   const clsFree = (cls, p) => !L.some(x => x.cls === cls && x.day === "Fri" && x.period === p);
   const moved = L.filter(x => x.spec === "Lowndes" && x.subj === "Health")
     .sort((a, b) => (b.day === "Fri") - (a.day === "Fri")).slice(0, 2);
@@ -735,7 +736,7 @@ const p6 = L.filter(x => x.period === "P6");
 const base = p6.filter(x => x.subj !== "Health"), gh = p6.filter(x => x.subj === "Health");
 // the meaningful invariant: every Years 1-6 class still has at least one P6 release
 const everyClassP6 = CLASSES.every(c => p6.some(x => x.cls === c.code));
-P(`Period 6 lessons: <b>${p6.length}</b> · ${base.length} base class releases + ${gh.length} graduate Health. Some Health periods are deliberately off Period 6: the two leadership-release Healths (LA9, LA21) and two grad Healths (LA18, LA22) sit in Friday P1-P5 (Aaron Bell), since Bell only has one P6 slot. Every Years 1-6 class still has a Period 6 release.`);
+P(`Period 6 lessons: <b>${p6.length}</b> · ${base.length} base class releases + ${gh.length} graduate Health. Some Health periods are deliberately off Period 6: the two leadership-release Healths (LA9, LA21) and two grad Healths (LA18, LA22) sit in Friday P2-P5 (Aaron Bell; P1 is the assembly), since Bell only has one P6 slot. Every Years 1-6 class still has a Period 6 release.`);
 table(["Day", "Class", "Subject", "Teacher", "Type"],
   p6.sort((a, b) => DAYS.indexOf(a.day) - DAYS.indexOf(b.day) || a.cls.localeCompare(b.cls)).map(x => [x.day, x.cls, x.subj, SPECIALIST_FULL[x.spec], x.subj === "Health" ? "grad extra" : "base release"]));
 P(`Every class has a Period 6 release: ${tick(everyClassP6)}. (15 base releases; ${gh.length} grad Health remain in P6, the others moved to Friday by design.)`);

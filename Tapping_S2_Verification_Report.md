@@ -18,7 +18,7 @@ Brief wording note: it refers in places to nine collaboration teams, but the enu
 
 ## 2. Period 6 reconciliation
 
-Period 6 lessons: 17 · 15 base class releases + 2 graduate Health. Some Health periods are deliberately off Period 6: the two leadership-release Healths (LA9, LA21) and two grad Healths (LA18, LA22) sit in Friday P1-P5 (Aaron Bell), since Bell only has one P6 slot. Every Years 1-6 class still has a Period 6 release.
+Period 6 lessons: 17 · 15 base class releases + 2 graduate Health. Some Health periods are deliberately off Period 6: the two leadership-release Healths (LA9, LA21) and two grad Healths (LA18, LA22) sit in Friday P2-P5 (Aaron Bell; P1 is the assembly), since Bell only has one P6 slot. Every Years 1-6 class still has a Period 6 release.
 | Day | Class | Subject | Teacher | Type |
 | --- | --- | --- | --- | --- |
 | Mon | LA17 | Visual Art | Natalie Carter | base release |
@@ -46,8 +46,8 @@ Every class has a Period 6 release: PASS. (15 base releases; 2 grad Health remai
 | --- | --- | --- | --- |
 | Natalie Carter | PBS | Mon P3 | fixed |
 | Cheryl Peak | Events | Tue P1 | Peak non-teaching block |
-| Jasper Sirr-Davis | OHS | Fri P1 | LA21 covered by Aaron Bell (Health) · additional 45-min release on top of normal DOTT |
-| Lincoln Rose | SSTUWA | Fri P4 | LA9 covered by Aaron Bell (Health) · additional 45-min release on top of normal DOTT |
+| Jasper Sirr-Davis | OHS | Fri P2 | LA21 covered by Aaron Bell (Health) · additional 45-min release on top of normal DOTT |
+| Lincoln Rose | SSTUWA | Fri P5 | LA9 covered by Aaron Bell (Health) · additional 45-min release on top of normal DOTT |
 All four leadership blocks placed: PASS. Each is a genuine extra 45-min release on top of the teacher's normal DOTT. Carter (PBS) and Peak (Events) are specialists, so their block is a non-teaching period in their own timetable. Rose (SSTUWA) and Sirr-Davis (OHS) are classroom teachers, so Aaron Bell teaches their class a Health period to release them (Friday). This is why LA9 and LA21 carry a third specialist period on that day (a deliberate exception to the 2-per-day rule for the leadership release).
 
 ## 4. Monday P0 and P1 vacancy
@@ -153,7 +153,7 @@ PE (rule 6): all PE is on Thursday, with the three PE teachers (Lowndes, Bell, J
 | P5 | LA18, LA19, LA20 | Lowndes / Bell / Pevitt |
 | P6 | LA22, LA23, LA24 | Lowndes / Bell / Pevitt |
 STEM (rule 5): every STEM block is two back-to-back periods (consecutive period numbers, same day): PASS.
-Specialist teaching by period (rule 7 aims to keep mornings lighter for literacy): P1:9  P2:16  P3:18  P4:19  P5:17  P6:17. Note Thursday PE necessarily fills some morning slots; the rest of the week is pushed later where the other hard rules allow.
+Specialist teaching by period (rule 7 aims to keep mornings lighter for literacy): P1:7  P2:16  P3:18  P4:19  P5:19  P6:17. Note Thursday PE necessarily fills some morning slots; the rest of the week is pushed later where the other hard rules allow.
 
 ## 10. Pre-Primary & Kindy DOTT ledger
 
