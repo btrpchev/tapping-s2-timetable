@@ -53,7 +53,7 @@ All four leadership blocks placed: PASS. Each is a genuine extra 45-min release 
 
 ## 4. Monday P0 and P1 vacancy
 
-Monday P0 specialist lessons: 0. Monday P1 specialist lessons: 1. Clear of all specialist activity: FAIL.
+Monday P0 specialist lessons: 0. Monday P1 specialist lessons: 2. Clear of all specialist activity: FAIL.
 
 ## 5. DOTT equity
 
@@ -131,7 +131,7 @@ Hard rule (Brad): no class may receive more than two specialist periods on any s
 | LA8 | 0 | 2 | 2 | 2 | 0 | 2 |
 | LA9 | 0 | 2 | 2 | 2 | 1 | 2 |
 | LA14 | 0 | 2 | 2 | 2 | 0 | 2 |
-| LA15 | 0 | 0 | 2 | 2 | 2 | 2 |
+| LA15 | 2 | 0 | 2 | 2 | 0 | 2 |
 | LA16 | 0 | 2 | 2 | 2 | 0 | 2 |
 | LA17 | 1 | 1 | 2 | 2 | 0 | 2 |
 | LA18 | 1 | 2 | 1 | 1 | 2 | 2 |
@@ -154,7 +154,7 @@ PE (rule 6): all PE is on Thursday, with the three PE teachers (Lowndes, Bell, J
 | P5 | LA18, LA19, LA20 | Lowndes / Bell / Pevitt |
 | P6 | LA22, LA23, LA24 | Lowndes / Bell / Pevitt |
 STEM (rule 5): every STEM block is two back-to-back periods (consecutive period numbers, same day): PASS.
-Specialist teaching by period (rule 7 aims to keep mornings lighter for literacy): P1:7  P2:16  P3:18  P4:18  P5:19  P6:18. Note Thursday PE necessarily fills some morning slots; the rest of the week is pushed later where the other hard rules allow.
+Specialist teaching by period (rule 7 aims to keep mornings lighter for literacy): P1:8  P2:15  P3:17  P4:19  P5:19  P6:18. Note Thursday PE necessarily fills some morning slots; the rest of the week is pushed later where the other hard rules allow.
 
 ## 10. Pre-Primary & Kindy DOTT ledger
 
@@ -164,7 +164,7 @@ Whole-day ECE model (separate from the specialist grid). Kindy DOTT = 320 × FTE
 | Jenny Martin | PP | LA5 | 1 | 320m | 310m | -10m |
 | Caroline Parkin | PP | LA2 | 1 | 320m | 310m | -10m |
 | Katie Digney | PP | LA1 | 0.8 | 256m | 265m | +9m |
-| Nikki Luca | PP | LA1 | 0.4 | 128m | 105m | -23m |
+| Nikki Luca | PP | LA1 | 0.4 | 128m | 135m | +7m |
 | Kelly Duggan | Kindy | LA4 | 0.8 | 256m | 260m | +4m |
 | Donna Campbell | Kindy | T10 | 0.8 | 256m | 245m | -11m |
 | Fiona Dyer | Kindy | T9 | 0.6 | 192m | 215m | +23m |

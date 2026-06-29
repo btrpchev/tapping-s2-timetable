@@ -561,7 +561,7 @@
       "subj": "STEM",
       "spec": "Lowndes",
       "day": "Mon",
-      "period": "P2",
+      "period": "P1",
       "room": "STEM Lab"
     },
     {
@@ -569,7 +569,7 @@
       "subj": "STEM",
       "spec": "Lowndes",
       "day": "Mon",
-      "period": "P3",
+      "period": "P2",
       "room": "STEM Lab"
     },
     {
@@ -608,16 +608,16 @@
       "cls": "LA15",
       "subj": "STEM",
       "spec": "Lowndes",
-      "day": "Fri",
-      "period": "P3",
+      "day": "Mon",
+      "period": "P4",
       "room": "STEM Lab"
     },
     {
       "cls": "LA15",
       "subj": "STEM",
       "spec": "Lowndes",
-      "day": "Fri",
-      "period": "P2",
+      "day": "Mon",
+      "period": "P3",
       "room": "STEM Lab"
     },
     {
