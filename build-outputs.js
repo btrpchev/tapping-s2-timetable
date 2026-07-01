@@ -454,7 +454,7 @@ const eRoomOf=n=>{const t=eceTea(n);return t?t.room:null;};
 function eceOcc(room,day,pid){for(const t of ECE_T){const a=(t[week][day]||[])[PIDX[pid]];if(a==='class'&&t.room===room)return{teacher:t.name,kind:'class'};if(typeof a==='string'&&a.indexOf('cov:')===0){const tg=a.slice(4);if(eRoomOf(tg)===room)return{teacher:t.name,kind:'cover',of:tg};}}const ex=D.ece.externalCover.find(e=>e.room===room&&e.day===day&&e.period===pid);if(ex)return{teacher:ex.byName,kind:'cover',of:ex.forName,external:true,by:ex.by};return{kind:'empty'};}
 function eceClassCell(code,day,pid){const c=eceCls(code);const o=eceOcc(c.room,day,pid);
   if(o.kind==='class')return{lines:[tLink('ece:'+o.teacher,last(o.teacher))],kind:'own',tip:o.teacher+' \\u00b7 '+code+' (own class)'};
-  if(o.kind==='cover'){const own=c.teachers.indexOf(o.teacher)>=0;const lnk=o.external?tLink(o.by,last(o.teacher)):tLink('ece:'+o.teacher,last(o.teacher));return{lines:[lnk],kind:own?'own':'cover',tip:own?o.teacher+' \\u00b7 '+code+' (job-share teacher)':o.teacher+' covering '+code+' for '+o.of};}
+  if(o.kind==='cover'){const own=c.teachers.indexOf(o.teacher)>=0;const relief=o.external&&o.by==='Relief';const lnk=relief?'Relief teacher':(o.external?tLink(o.by,last(o.teacher)):tLink('ece:'+o.teacher,last(o.teacher)));return{lines:[lnk],kind:own?'own':'cover',tip:own?o.teacher+' \\u00b7 '+code+' (job-share teacher)':o.teacher+' covering '+code+' for '+o.of};}
   return{lines:['No students'],kind:'off'};}
 function eceTeacherCell(name,day,pid){const t=eceTea(name);const a=(t[week][day]||[])[PIDX[pid]];
   if(a==='class')return{lines:[cLink(t.room)],kind:'own',tip:name+' \\u00b7 '+t.room+' (own class)'};
@@ -896,7 +896,7 @@ const lastName = n => n.split(" ").slice(-1)[0];
 function eceClassCellX(code, day, pid, week) {
   const c = eceClsS(code); const o = ECE.occupant(c.room, day, PIDX_S[pid], week);
   if (o.kind === "class") return { lines: [lastName(o.teacher), "(class)"], fill: COL.own };
-  if (o.kind === "cover") { const own = c.teachers.indexOf(o.teacher) >= 0; return { lines: [lastName(o.teacher), "(class)"], fill: own ? COL.own : "DCE8F5" }; }
+  if (o.kind === "cover") { const own = c.teachers.indexOf(o.teacher) >= 0; const nm = o.external && o.by === "Relief" ? "Relief teacher" : lastName(o.teacher); return { lines: [nm, "(class)"], fill: own ? COL.own : "DCE8F5" }; }
   return { lines: ["No students"], fill: COL.off };
 }
 function eceTeacherCellX(name, day, pid, week) {
