@@ -522,8 +522,8 @@ function overviewHTML(){
     if(p.id==='P0'){h+='<tr class="nonteach"><td class="timecol">P0<br><span style="font-weight:400;font-size:9px">'+p.t+'</span></td><td colspan="'+days.length+'">DOTT / admin (no specialist teaching)</td></tr>';continue;}
     h+='<tr><td class="timecol">'+p.label+'<br><span style="font-weight:400;font-size:9px">'+p.t+'</span></td>';
     for(const d of days){
-      if(d==='Mon'&&p.id==='P1'){h+='<td>'+chip({lines:['\\u2014 vacant \\u2014'],kind:'vac'})+'</td>';continue;}
       const here=at(d,p.id);
+      if(!here.length&&d==='Mon'&&p.id==='P1'){h+='<td>'+chip({lines:['\\u2014 vacant \\u2014'],kind:'vac'})+'</td>';continue;}
       h+='<td>'+here.map(x=>chip({lines:[cLabel(x.cls)+' '+x.subj,tLink(x.spec,D.specFull[x.spec])],fill:D.specColour[x.spec],white:true,kind:'spec',tip:lessonTip(x,x.cls)})).join('')+'</td>';
     }
     h+='</tr>';
