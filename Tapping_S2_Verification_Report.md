@@ -9,11 +9,11 @@ Brief wording note: it refers in places to nine collaboration teams, but the enu
 | Team | Window | Members verified | Status |
 | --- | --- | --- | --- |
 | Y1 | Wed P4 | LA22: Imogen Webb (Visual Art/Carter); LA23: Ashlee Hutchings (Performing Arts/Peak); LA24: Chloe Moore (Auslan/Walker) | PASS |
-| Y2 | Thu P5 | LA18: Hannah Bouwmeester (PE/Lowndes); LA19: Savannah Espach (PE/Bell); LA20: Anna Hendron (PE/Pevitt) | PASS |
+| Y2 | Wed P3 | LA18: Hannah Bouwmeester (Visual Art/Carter); LA19: Savannah Espach (Performing Arts/Peak); LA20: Anna Hendron (STEM/Lowndes) | PASS |
 | Y3-4 | Thu P4 | LA14: Olivia Sheehy (PE/Lowndes); LA15: Georgia Mitchell (PE/Bell); LA21: Jasper Sirr-Davis (PE/Pevitt) | PASS |
 | Y4-5 | Thu P3 | LA7: Nicola Pigott (PE/Lowndes); LA16: Tanya Thieme (PE/Bell); LA17: Cassidy Law (PE/Pevitt) | PASS |
-| Y5-6 | Thu P2 | LA6: John Dunbar (PE/Lowndes); LA8: Janette Crisp (PE/Bell); LA9: Lincoln Rose (PE/Pevitt) | PASS |
-| Arts | Wed P2 | Peak, Carter, Walker all on DOTT | PASS |
+| Y5-6 | Wed P2 | LA6: John Dunbar (Visual Art/Carter); LA8: Janette Crisp (Performing Arts/Peak); LA9: Lincoln Rose (Auslan/Walker) | PASS |
+| Arts | Wed P5 | Peak, Carter, Walker all on DOTT | PASS |
 | STEM/PE | Thu P1 | Bell, Lowndes on DOTT; Uhe joins from Thursday office | PASS |
 
 ## 2. Period 6 reconciliation
@@ -21,39 +21,39 @@ Brief wording note: it refers in places to nine collaboration teams, but the enu
 Period 6 lessons: 18 · 16 base class releases + 2 graduate Health. Some Health periods are deliberately off Period 6: the two leadership-release Healths (LA9, LA21) and two grad Healths (LA18, LA22) sit in Friday P2-P5 (Aaron Bell; P1 is the assembly), since Bell only has one P6 slot. Every Years 1-6 class still has a Period 6 release.
 | Day | Class | Subject | Teacher | Type |
 | --- | --- | --- | --- | --- |
-| Mon | LA17 | Visual Art | Natalie Carter | base release |
-| Mon | LA22 | STEM | Lis Lowndes | base release |
-| Tue | LA14 | Performing Arts | Cheryl Peak | base release |
-| Tue | LA18 | STEM | Lis Lowndes | base release |
-| Tue | LA20 | Visual Art | Natalie Carter | base release |
+| Mon | LA24 | Health | Lis Lowndes | grad extra |
+| Mon | LA8 | Visual Art | Natalie Carter | base release |
+| Tue | LA17 | Performing Arts | Cheryl Peak | base release |
+| Tue | LA19 | Visual Art | Natalie Carter | base release |
+| Tue | LA22 | STEM | Lis Lowndes | base release |
 | Tue | LA6 | STEM | Chantel Uhe | base release |
+| Wed | LA14 | Auslan | Rachel Walker | base release |
 | Wed | LA15 | Performing Arts | Cheryl Peak | base release |
-| Wed | LA21 | Auslan | Rachel Walker | base release |
-| Wed | LA23 | Health | Lis Lowndes | grad extra |
+| Wed | LA21 | STEM | Lis Lowndes | base release |
 | Wed | LA7 | STEM | Chantel Uhe | base release |
 | Wed | LA9 | Visual Art | Natalie Carter | base release |
 | Thu | LA16 | Auslan | Rachel Walker | base release |
+| Thu | LA18 | Performing Arts | Cheryl Peak | base release |
 | Thu | LA22 | PE | Lis Lowndes | base release |
 | Thu | LA23 | PE | Aaron Bell | base release |
 | Thu | LA24 | PE | Jake Pevitt | base release |
-| Thu | LA8 | Performing Arts | Cheryl Peak | base release |
-| Fri | LA19 | Auslan | Cheryl Peak | base release |
-| Fri | LA24 | Health | Aaron Bell | grad extra |
+| Fri | LA20 | Auslan | Cheryl Peak | base release |
+| Fri | LA23 | Health | Aaron Bell | grad extra |
 Every class has a Period 6 release: PASS. (15 base releases; 2 grad Health remain in P6, the others moved to Friday by design.)
 
 ## 3. Leadership placement check
 
 | Teacher | Role | Slot | Detail |
 | --- | --- | --- | --- |
-| Natalie Carter | PBS | Mon P3 | fixed |
-| Cheryl Peak | Events | Tue P1 | Peak non-teaching block |
-| Jasper Sirr-Davis | OHS | Fri P2 | LA21 covered by Aaron Bell (Health) · additional 45-min release on top of normal DOTT |
-| Lincoln Rose | SSTUWA | Fri P5 | LA9 covered by Aaron Bell (Health) · additional 45-min release on top of normal DOTT |
+| Natalie Carter | PBS | Mon P1 | fixed (moved from Mon P3 so LA23 can take P3 - Brad item 5) |
+| Cheryl Peak | Events | Tue P5 | Peak non-teaching block |
+| Lincoln Rose | SSTUWA | Fri P2 | LA9 covered by Aaron Bell (Health) · additional 45-min release on top of normal DOTT |
+| Jasper Sirr-Davis | OHS | Fri P3 | LA21 covered by Aaron Bell (Health) · additional 45-min release on top of normal DOTT |
 All four leadership blocks placed: PASS. Each is a genuine extra 45-min release on top of the teacher's normal DOTT. Carter (PBS) and Peak (Events) are specialists, so their block is a non-teaching period in their own timetable. Rose (SSTUWA) and Sirr-Davis (OHS) are classroom teachers, so Aaron Bell teaches their class a Health period to release them (Friday). This is why LA9 and LA21 carry a third specialist period on that day (a deliberate exception to the 2-per-day rule for the leadership release).
 
 ## 4. Monday P0 and P1 vacancy
 
-Monday P0 specialist lessons: 0. Monday P1 specialist lessons: 2. Clear of all specialist activity: FAIL.
+Monday P0 specialist lessons: 0. Monday P1 specialist lessons: 0. Clear of all specialist activity: PASS.
 
 ## 5. DOTT equity
 
@@ -126,21 +126,21 @@ Every class receives exactly its quota: PASS.
 Hard rule (Brad): no class may receive more than two specialist periods on any single day, so no classroom teacher gets more than two release periods in a day. Exception: the two leadership classes (LA9, LA21) may reach three on their leadership day, where the third period is Bell's Health cover that releases Rose / Sirr-Davis for leadership.
 | Class | Mon | Tue | Wed | Thu | Fri | Max/day |
 | --- | --- | --- | --- | --- | --- | --- |
-| LA6 | 1 | 2 | 1 | 2 | 0 | 2 |
+| LA6 | 0 | 2 | 2 | 2 | 0 | 2 |
 | LA7 | 0 | 2 | 2 | 2 | 0 | 2 |
-| LA8 | 0 | 2 | 2 | 2 | 0 | 2 |
+| LA8 | 1 | 2 | 2 | 1 | 0 | 2 |
 | LA9 | 0 | 2 | 2 | 2 | 1 | 2 |
-| LA14 | 0 | 2 | 2 | 2 | 0 | 2 |
-| LA15 | 2 | 0 | 2 | 2 | 0 | 2 |
-| LA16 | 0 | 2 | 2 | 2 | 0 | 2 |
-| LA17 | 1 | 1 | 2 | 2 | 0 | 2 |
-| LA18 | 1 | 2 | 1 | 1 | 2 | 2 |
-| LA19 | 0 | 1 | 2 | 2 | 1 | 2 |
-| LA20 | 2 | 2 | 0 | 1 | 1 | 2 |
-| LA21 | 0 | 0 | 2 | 2 | 3 | 3 (incl leadership) |
-| LA22 | 2 | 0 | 1 | 2 | 2 | 2 |
-| LA23 | 1 | 2 | 2 | 1 | 1 | 2 |
-| LA24 | 1 | 2 | 1 | 2 | 1 | 2 |
+| LA14 | 1 | 2 | 1 | 2 | 0 | 2 |
+| LA15 | 1 | 0 | 1 | 2 | 2 | 2 |
+| LA16 | 1 | 1 | 2 | 2 | 0 | 2 |
+| LA17 | 0 | 2 | 2 | 2 | 0 | 2 |
+| LA18 | 0 | 2 | 1 | 2 | 2 | 2 |
+| LA19 | 2 | 1 | 1 | 1 | 1 | 2 |
+| LA20 | 0 | 2 | 2 | 1 | 1 | 2 |
+| LA21 | 1 | 1 | 2 | 2 | 1 | 2 |
+| LA22 | 0 | 2 | 1 | 2 | 2 | 2 |
+| LA23 | 2 | 1 | 1 | 1 | 2 | 2 |
+| LA24 | 1 | 1 | 1 | 2 | 2 | 2 |
 Within the daily cap (2 per class, 3 for the two leadership classes on their leadership day): PASS.
 
 ## 9. PE block, STEM doubles and morning load
@@ -154,7 +154,7 @@ PE (rule 6): all PE is on Thursday, with the three PE teachers (Lowndes, Bell, J
 | P5 | LA18, LA19, LA20 | Lowndes / Bell / Pevitt |
 | P6 | LA22, LA23, LA24 | Lowndes / Bell / Pevitt |
 STEM (rule 5): every STEM block is two back-to-back periods (consecutive period numbers, same day): PASS.
-Specialist teaching by period (rule 7 aims to keep mornings lighter for literacy): P1:8  P2:15  P3:17  P4:19  P5:19  P6:18. Note Thursday PE necessarily fills some morning slots; the rest of the week is pushed later where the other hard rules allow.
+Specialist teaching by period (rule 7 aims to keep mornings lighter for literacy): P1:9  P2:17  P3:18  P4:19  P5:15  P6:18. Note Thursday PE necessarily fills some morning slots; the rest of the week is pushed later where the other hard rules allow.
 
 ## 10. Pre-Primary & Kindy DOTT ledger
 
@@ -164,7 +164,7 @@ Whole-day ECE model (separate from the specialist grid). Kindy DOTT = 320 × FTE
 | Jenny Martin | PP | LA5 | 1 | 320m | 310m | -10m |
 | Caroline Parkin | PP | LA2 | 1 | 320m | 310m | -10m |
 | Katie Digney | PP | LA1 | 0.8 | 256m | 265m | +9m |
-| Nikki Luca | PP | LA1 | 0.4 | 128m | 135m | +7m |
+| Nikki Luca | PP | LA1 | 0.4 | 128m | 105m | -23m |
 | Kelly Duggan | Kindy | LA4 | 0.8 | 256m | 260m | +4m |
 | Donna Campbell | Kindy | T10 | 0.8 | 256m | 245m | -11m |
 | Fiona Dyer | Kindy | T9 | 0.6 | 192m | 215m | +23m |

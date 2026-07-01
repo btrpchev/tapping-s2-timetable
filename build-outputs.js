@@ -102,14 +102,13 @@ const shortSpec = sp => SPECIALIST_FULL[sp].split(" ")[1] || SPECIALIST_FULL[sp]
 const LEAD_CLASSES = ["LA9", "LA21"];
 const leadershipReleases = [];
 (function bellFriday() {
-  const busy = new Set(L.filter(x => x.spec === "Bell" && x.day === "Fri").map(x => x.period)); // LA24 (P6)
+  // The solver now places LA18/LA22's grad Healths with Bell on Friday directly; this
+  // overlay only adds the two leadership-release Healths (Rose/LA9, Sirr-Davis/LA21).
+  const busy = new Set(L.filter(x => x.spec === "Bell" && x.day === "Fri").map(x => x.period));
   // Friday P1 is the whole-school assembly: no specialist lessons are placed there.
   const slots = ["P2", "P3", "P4", "P5"];
   const clsFree = (cls, p) => !L.some(x => x.cls === cls && x.day === "Fri" && x.period === p);
-  const moved = L.filter(x => x.spec === "Lowndes" && x.subj === "Health")
-    .sort((a, b) => (b.day === "Fri") - (a.day === "Fri")).slice(0, 2);
   const items = [
-    ...moved.map(h => ({ h, cls: h.cls })),
     { cls: "LA9", who: "Lincoln Rose", role: "SSTUWA", lead: true },
     { cls: "LA21", who: "Jasper Sirr-Davis", role: "OHS", lead: true },
   ];
@@ -121,15 +120,14 @@ const leadershipReleases = [];
     const p = it.valid.find(pp => !used.has(pp));
     if (!p) { console.error("bellFriday: no slot for", it.cls); continue; }
     used.add(p);
-    if (it.h) { it.h.spec = "Bell"; it.h.day = "Fri"; it.h.period = p; it.h.room = "Gym"; }
-    else { L.push({ cls: it.cls, subj: "Health", spec: "Bell", day: "Fri", period: p, room: "Gym", leadership: true }); leadershipReleases.push({ who: it.who, role: it.role, cls: it.cls, day: "Fri", period: p }); }
+    L.push({ cls: it.cls, subj: "Health", spec: "Bell", day: "Fri", period: p, room: "Gym", leadership: true }); leadershipReleases.push({ who: it.who, role: it.role, cls: it.cls, day: "Fri", period: p });
   }
 })();
 
 /* ---------- leadership placements ---------- */
 const WIN = SOL.windows;
 const leadership = [];
-leadership.push({ who: "Natalie Carter", spec: "Carter", role: "PBS", day: "Mon", period: "P3", note: "fixed" });
+leadership.push({ who: "Natalie Carter", spec: "Carter", role: "PBS", day: "Mon", period: "P1", note: "fixed (moved from Mon P3 so LA23 can take P3 - Brad item 5)" });
 (function peakLead() {
   for (const d of SPEC_DAYS.Peak) for (const p of ["P1", "P2", "P3", "P4", "P5"]) {
     if (d === "Mon" && p === "P1") continue;
@@ -602,7 +600,7 @@ function teacherStats(tk){
       free+=PM[p];}
     free+=25*D.specDays[tk].length;
     const lead=(tk==='Carter'||tk==='Peak')?45:0;
-    const note=tk==='Uhe'?'0.4 teaching; her Mon/Thu office days carry the rest of her DOTT':(tk==='Bell'?'incl ECE & leadership covers':'');
+    const note=tk==='Uhe'?'0.4 teaching; her Mon/Thu office days carry the rest of her DOTT':(tk==='Bell'?'incl leadership-release Health periods':'');
     return {role:'Specialist · works '+D.specDays[tk].join('/'),fte:D.specFte[tk],ent,dott:free,periods:taught,periodsLabel:'Periods taught',lead,note};}
   const code=tk;let tot=0,rel=0;for(const x of D.lessons.filter(y=>y.cls===code)){tot+=PM[x.period];rel++;}
   const lead=D.leadClasses.includes(code)?45:0;

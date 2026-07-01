@@ -14,7 +14,7 @@ const rep = v => Array(7).fill(v);
 const split = (map, base = C) => PIDS.map((_, i) => map[i] !== undefined ? map[i] : base);
 
 const katieFri = split({ 5: C }, D);                 // P5 class (covers Nikki), rest dott; LA1 then needs external cover at P6 (Lis), keeping Fri P1 clear for assembly
-const nikkiFri = split({ 2: D, 3: D, 5: D }, "cov:Katie Digney"); // DOTT P2,P3 (Lis covers LA1), P5 (Katie covers); teaches P0,P1,P4,P6 (covers Katie) = 135 min DOTT
+const nikkiFri = split({ 5: D, 6: D }, "cov:Katie Digney"); // DOTT P5 (Katie teaches) + P6 (Lis Lowndes covers) = 105 min; -23 residual paid back outside the timetable (Brad)
 const kellyMon = split({ 5: D, 6: D }, C);           // P5,P6 dott (Anita covers)
 const donnaMon = split({ 3: D, 4: D }, C);           // P3,P4 dott (Anita covers)
 const fionaFri = split({ 6: D }, C);                 // P6 dott (Lowndes covers T9)
@@ -36,7 +36,7 @@ const eceTeachers = [
   { name: "Nikki Luca", phase: "PP", room: "LA1", fte: 0.4,
     A: { Mon: rep(O), Tue: rep(O), Wed: rep(O), Thu: rep(C), Fri: nikkiFri },
     B: { Mon: rep(O), Tue: rep(O), Wed: rep(O), Thu: rep(C), Fri: nikkiFri },
-    note: "Works Thu & Fri (0.4). Teaches LA1 all Thursday (Katie off). Fri DOTT = P2+P3 (Lis Lowndes covers LA1) + P5 (Katie covers) = 135 min vs 128 target (now slightly over; deficit closed)." },
+    note: "Works Thu & Fri (0.4). Teaches LA1 all Thursday (Katie off). Fri DOTT = P5 (Katie teaches) + P6 (Lis Lowndes covers) = 105 min vs 128 target; the -23 residual is paid back outside the timetable (Brad)." },
   { name: "Kelly Duggan", phase: "Kindy", room: "LA4", fte: 0.8,
     A: { Mon: kellyMon, Tue: rep(C), Wed: rep(C), Thu: rep(O), Fri: rep("cov:Jenny Martin") },
     B: { Mon: kellyMon, Tue: rep(C), Wed: rep(D), Thu: rep(O), Fri: rep("cov:Jenny Martin") },
@@ -69,13 +69,12 @@ const roomOf = name => (eceTeachers.find(t => t.name === name) || {}).room;
 
 // covers provided by NON-ECE staff into an ECE room.
 // `by` is the Year 1-6 specialist key (or "Relief" for a relief teacher); byName is for display.
-// Friday P1 is the whole-school assembly, so Lis Lowndes's Friday STEM fills P2-P5; that
-// leaves her only P6 free, which she uses to cover Nikki's LA1 DOTT. Fiona's T9 DOTT (P6)
-// can no longer be covered by Lis at the same time, so it is covered by a relief teacher.
+// Friday P1 is the whole-school assembly (no specialist lessons). Lis Lowndes's Friday P6 is
+// reserved in the solver so she can cover Nikki's LA1 DOTT then (one 60-min period; Katie
+// teaching P5 provides the other 45). Fiona's T9 DOTT (P6) is covered by a relief teacher.
 const externalCover = [
   { room: "T9", day: "Fri", period: "P6", by: "Relief", byName: "Relief teacher", forName: "Fiona Dyer" },
-  { room: "LA1", day: "Fri", period: "P2", by: "Lowndes", byName: "Lis Lowndes", forName: "Nikki Luca" },
-  { room: "LA1", day: "Fri", period: "P3", by: "Lowndes", byName: "Lis Lowndes", forName: "Nikki Luca" },
+  { room: "LA1", day: "Fri", period: "P6", by: "Lowndes", byName: "Lis Lowndes", forName: "Nikki Luca" },
 ];
 
 // who is in `roomCode` at (day, period index, week 'A'|'B')

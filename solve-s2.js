@@ -94,6 +94,10 @@ const GRADS = CLASSES.filter(c => c.grad).map(c => c.code);
 // here - it pushed the grid into an unsolvable zero-slack packing. The solver keeps
 // the clean 94-period Years 1-6 grid; Bell's Friday P2-P4 stay free for the overlay.
 const P6QUOTA = {}; CLASSES.forEach(c => P6QUOTA[c.code] = c.grad ? 2 : 1);
+// LA18's Health is a Bell-Friday 45-min lesson (off-P6), so LA18 needs only its base P6.
+// LA22 keeps 2 P6s (PE + one 60-min from another subject) so Webb stays level with the
+// other grads at +75 (Brad's equity fix); LA18 carries the structural +60 (accepted).
+P6QUOTA.LA18 = 1;
 
 const REQDOTT = {}; Object.keys(SFTE).forEach(s => { if (SFTE[s] != null) REQDOTT[s] = Math.round(270 * SFTE[s]); });
 
@@ -141,13 +145,22 @@ function buildLessons() {
   const add = (code, subj, specs, kind, p6, daysOnly) => { if (!ANCHORED.has(code + "|" + subj)) out.push(mk(code, subj, specs, kind, p6, daysOnly)); };
   for (const c of CLASSES) {
     const code = c.code;
-    if (!UHE_STEM.includes(code)) add(code, "STEM", ["Lowndes"], "double", "maybe");
+    // LA21's STEM stays off Friday so Bell keeps a Friday slot free for Sirr-Davis'
+    // leadership release (LA9 has no placeable Friday subjects, so it is safe).
+    if (!UHE_STEM.includes(code)) add(code, "STEM", ["Lowndes"], "double", "maybe",
+      code === "LA21" ? ["Mon", "Tue", "Wed", "Thu"] : null);
     add(code, "Visual Art", ["Carter"], "single", "maybe");
     add(code, "Performing Arts", ["Peak"], "single", "maybe", PEAK_PA_DAYS);   // Peak PA: Tue/Wed/Thu
     // Auslan: seniors -> Walker; juniors -> Peak (the single junior->Walker, LA24, is anchored)
     add(code, "Auslan", WALK_AUS.includes(code) ? ["Walker"] : ["Peak"], "single", "maybe",
       WALK_AUS.includes(code) ? null : PEAK_AUS_DAYS);                          // Peak Auslan: Friday only
-    if (c.grad) add(code, "Health", ["Bell", "Lowndes"], "single", "must");
+    // Grad Health: LA18 & LA22 take theirs with Bell on Friday (45-min, off-P6) - this
+    // replaces the old build-time overlay and frees Lowndes P6 supply (her Fri P6 now
+    // covers Nikki's LA1). LA23/LA24 keep a 60-min P6 Health.
+    if (c.grad) {
+      if (code === "LA18" || code === "LA22") add(code, "Health", ["Bell"], "single", "no", ["Fri"]);
+      else add(code, "Health", ["Bell", "Lowndes"], "single", "must");
+    }
   }
   return out;
 }
@@ -161,11 +174,12 @@ const specFree = (st, s, d, p) => !st.specAt[sk(s, d, p)];
 
 function specBlocked(st, sp, d, p) {
   if (d === "Mon" && p === "P1") return true;
-  if (sp === "Carter" && d === "Mon" && p === "P3") return true;
-  // Bell's Friday ECE covers (overlay, not in this grid): Fiona T9 P1, Nikki LA1 P5
-  if (sp === "Bell" && d === "Fri" && (p === "P1" || p === "P5")) return true;
-  // Peak leads Friday assemblies: keep her Friday P1 free (P0 is already DOTT)
-  if (sp === "Peak" && d === "Fri" && p === "P1") return true;
+  // Carter leadership (PBS) moved Mon P3 -> Mon P1 (P1 is blocked for teaching anyway,
+  // so this frees her Mon P3 for a class - Brad item 5).
+  // Friday P1 = whole-school assembly: no specialist teaches any class then.
+  if (d === "Fri" && p === "P1") return true;
+  // Lowndes' Fri P6 is reserved: she covers Nikki Luca's LA1 (PP) DOTT then (ECE overlay).
+  if (sp === "Lowndes" && d === "Fri" && p === "P6") return true;
   if (st.win) {
     if (st.win.Arts && d === st.win.Arts.day && p === st.win.Arts.p && SPEC_TEAMS.Arts.members.includes(sp)) return true;
     if (st.win.STEMPE && d === st.win.STEMPE.day && p === st.win.STEMPE.p && ["Bell", "Lowndes"].includes(sp)) return true;
@@ -236,10 +250,24 @@ function p6Reachable(st, remaining) {
 // coupled CSPs via restarts), with a gentle nudge to teach later (#7) and to
 // co-locate team-mates (helps form collaboration windows). Kept small so it
 // never dominates feasibility.
+const prevP = p => TEACH[pIdx(p) - 1];
+const nextP = p => TEACH[pIdx(p) + 1];
+const isLowerPh = code => Math.max(...C[code].yrs) <= 3;   // Lower Primary = up to Yr 3
+const phaseOf = code => (Math.max(...C[code].yrs) >= 4 ? "U" : "L");
 function scoreCand(st, L, c) {
   let s = rand() * 10;
   const team = TEAM_OF[L.cls];
-  if (team) { let m = 0; for (const x of TEAMS[team]) if (x !== L.cls) for (const p of c.periods) if (st.classAt[ck(x, c.d, p)]) m++; s += m * 3; }
+  // (item 1) reward releasing team-mates together -> shared collaboration DOTT
+  if (team) { let m = 0; for (const x of TEAMS[team]) if (x !== L.cls) for (const p of c.periods) if (st.classAt[ck(x, c.d, p)]) m++; s += m * 9; }
+  // (item 4) discourage morning releases (P1-P3); harder for Lower Primary (Upper carries extras)
+  const morn = c.periods.filter(p => p === "P1" || p === "P2" || p === "P3").length;
+  s -= morn * (isLowerPh(L.cls) ? 7 : 2);
+  // (item 3) Carter Visual Art: sit beside a same-phase class so she doesn't repack resources
+  if (c.sp === "Carter") { const ph = phaseOf(L.cls);
+    for (const p of c.periods) for (const adj of [prevP(p), nextP(p)]) {
+      const nb = adj && st.specAt[sk("Carter", c.d, adj)];
+      if (nb && phaseOf(nb.cls) === ph) s += 6;
+    } }
   s += c.periods.reduce((a, p) => a + pIdx(p), 0) * 0.4;   // #7 gentle: teach later
   return s;
 }
@@ -317,12 +345,16 @@ function validate(st) {
     for (const [s, n] of Object.entries(need)) if ((g[s] || 0) !== n) e.push(`${c.code} ${s} ${g[s] || 0}/${n}`);
   }
   if (!NOP6) { for (const c of CLASSES) { const n = st.p6cls[c.code] || 0; if (n !== P6QUOTA[c.code]) e.push(`${c.code} P6 ${n}/${P6QUOTA[c.code]}`); }
-  const p6tot = Object.values(st.p6cls).reduce((a, b) => a + b, 0); if (p6tot !== 19) e.push(`P6 total ${p6tot}`); }
+  const p6tot = Object.values(st.p6cls).reduce((a, b) => a + b, 0); if (p6tot !== 18) e.push(`P6 total ${p6tot}`); }
   for (const L of P) for (const p of L.periods) {
     if (!SDAYS[L.spec].includes(L.day)) e.push(`${L.spec} off-day ${L.day}`);
     if (L.day === "Mon" && p === "P1") e.push(`Mon P1 used ${L.cls}`);
+    if (L.day === "Fri" && p === "P1") e.push(`Fri P1 used ${L.cls} (assembly)`);
   }
-  P.filter(L => L.subj === "Health").forEach(L => { if (L.periods[0] !== "P6") e.push(`${L.cls} Health not P6`); });
+  P.filter(L => L.subj === "Health").forEach(L => {
+    if (L.cls === "LA18" || L.cls === "LA22") { if (L.day !== "Fri" || L.spec !== "Bell" || L.periods[0] === "P6") e.push(`${L.cls} Health must be Bell Fri non-P6`); }
+    else if (L.periods[0] !== "P6") e.push(`${L.cls} Health not P6`);
+  });
   P.filter(L => L.subj === "PE").forEach(L => { if (L.day !== "Thu") e.push(`${L.cls} PE not Thu`); });
   P.filter(L => L.subj === "STEM").forEach(L => { if (pIdx(L.periods[1]) - pIdx(L.periods[0]) !== 1) e.push(`${L.cls} STEM not consecutive`); });
   for (const k in st.clsDay) if (st.clsDay[k] > MAXPERDAY) e.push(`${k} ${st.clsDay[k]} periods/day`);
@@ -344,12 +376,18 @@ function dottReport(st) {
   }
   return rows;
 }
-function specBlocked0(st, sp, d, p) { // leadership-only (not DOTT). Carter Mon P3, Peak lead.
-  if (sp === "Carter" && d === "Mon" && p === "P3") return true;
+function specBlocked0(st, sp, d, p) { // leadership-only (not DOTT). Carter Mon P1, Peak lead.
+  if (sp === "Carter" && d === "Mon" && p === "P1") return true;
   if (st.win.PeakLead && sp === "Peak" && d === st.win.PeakLead.day && p === st.win.PeakLead.p) return true;
   return false;
 }
 function equitySpread(st) { const v = dottReport(st).filter(r => r.req != null && r.sp !== "Uhe").map(r => r.dott); return Math.max(...v) - Math.min(...v); }
+// (item 1) periods where 2+ team-mates share a release; all-3 counts triple
+function teamShared(st) { let n = 0; for (const cs of Object.values(TEAMS)) for (const d of DAYS) for (const p of TEACH) { const k = cs.filter(c => st.classAt[ck(c, d, p)]).length; if (k >= 2) n += (k === 3 ? 3 : 1); } return n; }
+// (item 4) morning (P1-P3) releases, Lower Primary weighted heavier
+function morningLoad(st) { let n = 0; for (const L of allPlaced(st)) for (const p of L.periods) if (p === "P1" || p === "P2" || p === "P3") n += isLowerPh(L.cls) ? 3 : 1; return n; }
+// (item 3) Carter Visual Art same-phase adjacencies across her Mon-Wed
+function artAdj(st) { let n = 0; for (const d of ["Mon", "Tue", "Wed"]) for (let i = 0; i < TEACH.length - 1; i++) { const a = st.specAt[sk("Carter", d, TEACH[i])], b = st.specAt[sk("Carter", d, TEACH[i + 1])]; if (a && b && phaseOf(a.cls) === phaseOf(b.cls)) n++; } return n; }
 
 /* ------------------------------- search ----------------------------- */
 let best = null, bestScore = -1, fb = null, fbScore = -1, fValid = 0, fWin = 0, fDott = 0;
@@ -361,12 +399,13 @@ for (let t = 0; t < TRIES; t++) {
   st.windows = w.all;
   const mon = allPlaced(st).filter(L => L.day === "Mon").length;
   const early = allPlaced(st).filter(L => L.spec !== "Uhe" && L.subj !== "PE").reduce((a, L) => a + L.periods.reduce((x, p) => x + pIdx(p), 0), 0);
-  const sc = 100000 - equitySpread(st) * 5 - mon * 2 + early; // higher early = teach later
+  // coordinated-redesign objective: team-shared DOTT up, morning load down, Art phase-aligned
+  const sc = 100000 - equitySpread(st) * 4 - mon * 2 + early + teamShared(st) * 18 - morningLoad(st) * 3 + artAdj(st) * 10;
   const dr = dottReport(st); const dottOK = dr.every(r => r.req == null || r.sp === "Uhe" || r.dott >= r.req);
   if (!dottOK) { if (sc > fbScore) { fbScore = sc; fb = st; } continue; }
   fDott++;
   if (sc > bestScore) { bestScore = sc; best = st; }
-  if (fDott >= 8) break;
+  if (fDott >= 25) break;
 }
 if (!best && fb) { best = fb; console.log("NOTE: using best windows-valid grid; a specialist may sit slightly under DOTT."); }
 if (!best) { console.log(`No valid grid with all windows in ${TRIES} tries. valid=${fValid} win=${fWin}`); if (DBG) console.log(`deepest=${gDepth}/${"?"} last stuck on: ${gStuck}`); process.exit(1); }
