@@ -276,9 +276,12 @@ function chooseWindows() {
   // MORE MORNING LEARNING (Brad): team meetings sit in the MORNING so specialist
   // teaching capacity is kept for the afternoon (classes stay in for morning learning).
   const artsP = choice(["P1", "P2", "P3"]);
-  // Peak's Events leadership = Friday P1: she leads the assembly, and that period is
-  // already blocked for specialist teaching, so the block costs zero teaching capacity.
-  return { Arts: { day: "Wed", p: artsP }, STEMPE: { day: "Thu", p: "P1" }, PeakLead: { day: "Fri", p: "P1" } };
+  // Peak's Events leadership: its own MORNING period on Tue-Thu. Never Friday P1 -
+  // that stays as her DOTT because she runs the whole-school assembly then (Brad).
+  let pl = null;
+  for (let i = 0; i < 40; i++) { const d = choice(["Tue", "Wed", "Thu"]), p = choice(["P1", "P2", "P3"]); if (d === "Wed" && p === artsP) continue; pl = { day: d, p }; break; }
+  if (!pl) return null;
+  return { Arts: { day: "Wed", p: artsP }, STEMPE: { day: "Thu", p: "P1" }, PeakLead: pl };
 }
 
 function buildOnce() {

@@ -128,9 +128,18 @@ const leadershipReleases = [];
 const WIN = SOL.windows;
 const leadership = [];
 leadership.push({ who: "Natalie Carter", spec: "Carter", role: "PBS", day: "Mon", period: "P1", note: "fixed (moved from Mon P3 so LA23 can take P3 - Brad item 5)" });
-// Peak's Events leadership sits on Friday P1: she leads the whole-school assembly, and
-// that period is already blocked for specialist teaching (zero teaching-capacity cost).
-leadership.push({ who: "Cheryl Peak", spec: "Peak", role: "Events", day: "Fri", period: "P1", note: "leads the Friday assembly (P1 carries no specialist teaching)" });
+// Peak's Events leadership: a real release period of its own. NOT Friday P1 - that stays
+// as her DOTT because she runs the whole-school assembly then (Brad). Mornings preferred
+// (MORE MORNING LEARNING: meetings early, teaching late).
+(function peakLead() {
+  for (const p of ["P1", "P2", "P3", "P4", "P5"]) for (const d of SPEC_DAYS.Peak) {
+    if (d === "Fri" && p === "P1") continue;                      // assembly: her DOTT, protected
+    if (d === WIN.Arts.day && p === WIN.Arts.p) continue;         // Arts team collaboration
+    if (teaches("Peak", d, p)) continue;
+    leadership.push({ who: "Cheryl Peak", spec: "Peak", role: "Events", day: d, period: p, note: "Peak non-teaching block" }); return;
+  }
+  leadership.push({ who: "Cheryl Peak", spec: "Peak", role: "Events", day: "?", period: "?", note: "assign manually" });
+})();
 // Rose & Sirr-Davis leadership = the extra Bell-Health release period (overlay above)
 leadershipReleases.forEach(r => leadership.push({
   who: r.who, role: r.role, cls: r.cls, day: r.day, period: r.period,

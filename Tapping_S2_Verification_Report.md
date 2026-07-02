@@ -46,7 +46,7 @@ Every class has a Period 6 release: PASS. (15 base releases; 2 grad Health remai
 | Teacher | Role | Slot | Detail |
 | --- | --- | --- | --- |
 | Natalie Carter | PBS | Mon P1 | fixed (moved from Mon P3 so LA23 can take P3 - Brad item 5) |
-| Cheryl Peak | Events | Fri P1 | leads the Friday assembly (P1 carries no specialist teaching) |
+| Cheryl Peak | Events | Thu P1 | Peak non-teaching block |
 | Lincoln Rose | SSTUWA | Fri P2 | LA9 covered by Aaron Bell (Health) · additional 45-min release on top of normal DOTT |
 | Jasper Sirr-Davis | OHS | Fri P3 | LA21 covered by Aaron Bell (Health) · additional 45-min release on top of normal DOTT |
 All four leadership blocks placed: PASS. Each is a genuine extra 45-min release on top of the teacher's normal DOTT. Carter (PBS) and Peak (Events) are specialists, so their block is a non-teaching period in their own timetable. Rose (SSTUWA) and Sirr-Davis (OHS) are classroom teachers, so Aaron Bell teaches their class a Health period to release them (Friday). This is why LA9 and LA21 carry a third specialist period on that day (a deliberate exception to the 2-per-day rule for the leadership release).
