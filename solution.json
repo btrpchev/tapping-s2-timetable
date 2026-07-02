@@ -6,16 +6,16 @@
   },
   "windows": {
     "Y1": {
-      "day": "Wed",
-      "p": "P4"
-    },
-    "Y2": {
       "day": "Tue",
       "p": "P2"
     },
-    "Y3-4": {
+    "Y2": {
       "day": "Thu",
-      "p": "P4"
+      "p": "P5"
+    },
+    "Y3-4": {
+      "day": "Wed",
+      "p": "P2"
     },
     "Y4-5": {
       "day": "Thu",
@@ -27,7 +27,7 @@
     },
     "Arts": {
       "day": "Wed",
-      "p": "P2"
+      "p": "P1"
     },
     "STEM/PE": {
       "day": "Thu",
@@ -297,102 +297,38 @@
       "subj": "Auslan",
       "spec": "Walker",
       "day": "Thu",
-      "period": "P5",
-      "room": "Auslan room"
-    },
-    {
-      "cls": "LA16",
-      "subj": "Auslan",
-      "spec": "Walker",
-      "day": "Thu",
-      "period": "P6",
-      "room": "Auslan room"
-    },
-    {
-      "cls": "LA17",
-      "subj": "Auslan",
-      "spec": "Walker",
-      "day": "Thu",
-      "period": "P2",
-      "room": "Auslan room"
-    },
-    {
-      "cls": "LA18",
-      "subj": "Health",
-      "spec": "Bell",
-      "day": "Fri",
-      "period": "P5",
-      "room": "Gym"
-    },
-    {
-      "cls": "LA22",
-      "subj": "Health",
-      "spec": "Bell",
-      "day": "Fri",
       "period": "P4",
-      "room": "Gym"
-    },
-    {
-      "cls": "LA18",
-      "subj": "Auslan",
-      "spec": "Peak",
-      "day": "Fri",
-      "period": "P6",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA22",
-      "subj": "Auslan",
-      "spec": "Peak",
-      "day": "Fri",
-      "period": "P2",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA19",
-      "subj": "Auslan",
-      "spec": "Peak",
-      "day": "Fri",
-      "period": "P4",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA20",
-      "subj": "Auslan",
-      "spec": "Peak",
-      "day": "Fri",
-      "period": "P5",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA23",
-      "subj": "Auslan",
-      "spec": "Peak",
-      "day": "Fri",
-      "period": "P3",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA23",
-      "subj": "Health",
-      "spec": "Bell",
-      "day": "Fri",
-      "period": "P6",
-      "room": "Gym"
-    },
-    {
-      "cls": "LA24",
-      "subj": "Health",
-      "spec": "Lowndes",
-      "day": "Mon",
-      "period": "P6",
-      "room": "STEM Lab"
+      "room": "Auslan room"
     },
     {
       "cls": "LA7",
       "subj": "Performing Arts",
       "spec": "Peak",
       "day": "Tue",
+      "period": "P4",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA16",
+      "subj": "Auslan",
+      "spec": "Walker",
+      "day": "Thu",
+      "period": "P5",
+      "room": "Auslan room"
+    },
+    {
+      "cls": "LA17",
+      "subj": "Auslan",
+      "spec": "Walker",
+      "day": "Thu",
+      "period": "P6",
+      "room": "Auslan room"
+    },
+    {
+      "cls": "LA17",
+      "subj": "Performing Arts",
+      "spec": "Peak",
+      "day": "Tue",
       "period": "P5",
       "room": "Music room"
     },
@@ -401,351 +337,423 @@
       "subj": "Performing Arts",
       "spec": "Peak",
       "day": "Tue",
-      "period": "P1",
+      "period": "P6",
       "room": "Music room"
+    },
+    {
+      "cls": "LA18",
+      "subj": "Health",
+      "spec": "Bell",
+      "day": "Fri",
+      "period": "P5",
+      "room": "Gym"
+    },
+    {
+      "cls": "LA22",
+      "subj": "Health",
+      "spec": "Bell",
+      "day": "Fri",
+      "period": "P4",
+      "room": "Gym"
+    },
+    {
+      "cls": "LA18",
+      "subj": "Auslan",
+      "spec": "Peak",
+      "day": "Fri",
+      "period": "P6",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA22",
+      "subj": "Auslan",
+      "spec": "Peak",
+      "day": "Fri",
+      "period": "P2",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA19",
+      "subj": "Auslan",
+      "spec": "Peak",
+      "day": "Fri",
+      "period": "P3",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA20",
+      "subj": "Auslan",
+      "spec": "Peak",
+      "day": "Fri",
+      "period": "P4",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA23",
+      "subj": "Auslan",
+      "spec": "Peak",
+      "day": "Fri",
+      "period": "P5",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA23",
+      "subj": "Health",
+      "spec": "Bell",
+      "day": "Fri",
+      "period": "P6",
+      "room": "Gym"
+    },
+    {
+      "cls": "LA24",
+      "subj": "Health",
+      "spec": "Lowndes",
+      "day": "Wed",
+      "period": "P6",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA6",
+      "subj": "Auslan",
+      "spec": "Walker",
+      "day": "Wed",
+      "period": "P5",
+      "room": "Auslan room"
+    },
+    {
+      "cls": "LA8",
+      "subj": "Auslan",
+      "spec": "Walker",
+      "day": "Thu",
+      "period": "P3",
+      "room": "Auslan room"
+    },
+    {
+      "cls": "LA8",
+      "subj": "Performing Arts",
+      "spec": "Peak",
+      "day": "Wed",
+      "period": "P5",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA9",
+      "subj": "Auslan",
+      "spec": "Walker",
+      "day": "Wed",
+      "period": "P6",
+      "room": "Auslan room"
+    },
+    {
+      "cls": "LA14",
+      "subj": "Auslan",
+      "spec": "Walker",
+      "day": "Wed",
+      "period": "P3",
+      "room": "Auslan room"
+    },
+    {
+      "cls": "LA15",
+      "subj": "Auslan",
+      "spec": "Walker",
+      "day": "Thu",
+      "period": "P2",
+      "room": "Auslan room"
+    },
+    {
+      "cls": "LA21",
+      "subj": "Auslan",
+      "spec": "Walker",
+      "day": "Wed",
+      "period": "P2",
+      "room": "Auslan room"
+    },
+    {
+      "cls": "LA15",
+      "subj": "Performing Arts",
+      "spec": "Peak",
+      "day": "Wed",
+      "period": "P3",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA6",
+      "subj": "Performing Arts",
+      "spec": "Peak",
+      "day": "Thu",
+      "period": "P3",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA9",
+      "subj": "Performing Arts",
+      "spec": "Peak",
+      "day": "Thu",
+      "period": "P5",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA24",
+      "subj": "Performing Arts",
+      "spec": "Peak",
+      "day": "Thu",
+      "period": "P2",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA18",
+      "subj": "Performing Arts",
+      "spec": "Peak",
+      "day": "Tue",
+      "period": "P3",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA21",
+      "subj": "Performing Arts",
+      "spec": "Peak",
+      "day": "Wed",
+      "period": "P6",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA22",
+      "subj": "Performing Arts",
+      "spec": "Peak",
+      "day": "Tue",
+      "period": "P2",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA14",
+      "subj": "Performing Arts",
+      "spec": "Peak",
+      "day": "Wed",
+      "period": "P2",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA19",
+      "subj": "Performing Arts",
+      "spec": "Peak",
+      "day": "Thu",
+      "period": "P6",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA20",
+      "subj": "Performing Arts",
+      "spec": "Peak",
+      "day": "Thu",
+      "period": "P4",
+      "room": "Music room"
+    },
+    {
+      "cls": "LA22",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Mon",
+      "period": "P5",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA22",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Mon",
+      "period": "P6",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA6",
+      "subj": "Visual Art",
+      "spec": "Carter",
+      "day": "Mon",
+      "period": "P4",
+      "room": "Art room"
+    },
+    {
+      "cls": "LA9",
+      "subj": "Visual Art",
+      "spec": "Carter",
+      "day": "Wed",
+      "period": "P5",
+      "room": "Art room"
+    },
+    {
+      "cls": "LA18",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Mon",
+      "period": "P3",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA18",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Mon",
+      "period": "P4",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA21",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Tue",
+      "period": "P3",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA21",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Tue",
+      "period": "P4",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA23",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Tue",
+      "period": "P1",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA23",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Tue",
+      "period": "P2",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA24",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Fri",
+      "period": "P4",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA24",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Fri",
+      "period": "P5",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA15",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Tue",
+      "period": "P5",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA15",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Tue",
+      "period": "P6",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA14",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Fri",
+      "period": "P2",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA14",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Fri",
+      "period": "P3",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA21",
+      "subj": "Visual Art",
+      "spec": "Carter",
+      "day": "Mon",
+      "period": "P5",
+      "room": "Art room"
+    },
+    {
+      "cls": "LA15",
+      "subj": "Visual Art",
+      "spec": "Carter",
+      "day": "Wed",
+      "period": "P2",
+      "room": "Art room"
+    },
+    {
+      "cls": "LA23",
+      "subj": "Visual Art",
+      "spec": "Carter",
+      "day": "Wed",
+      "period": "P3",
+      "room": "Art room"
+    },
+    {
+      "cls": "LA8",
+      "subj": "Visual Art",
+      "spec": "Carter",
+      "day": "Wed",
+      "period": "P6",
+      "room": "Art room"
+    },
+    {
+      "cls": "LA18",
+      "subj": "Visual Art",
+      "spec": "Carter",
+      "day": "Tue",
+      "period": "P4",
+      "room": "Art room"
+    },
+    {
+      "cls": "LA19",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Wed",
+      "period": "P4",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA19",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Wed",
+      "period": "P5",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA20",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Wed",
+      "period": "P2",
+      "room": "STEM Lab"
+    },
+    {
+      "cls": "LA20",
+      "subj": "STEM",
+      "spec": "Lowndes",
+      "day": "Wed",
+      "period": "P3",
+      "room": "STEM Lab"
     },
     {
       "cls": "LA17",
-      "subj": "Performing Arts",
-      "spec": "Peak",
-      "day": "Tue",
-      "period": "P3",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA6",
-      "subj": "Auslan",
-      "spec": "Walker",
-      "day": "Wed",
-      "period": "P5",
-      "room": "Auslan room"
-    },
-    {
-      "cls": "LA14",
-      "subj": "Auslan",
-      "spec": "Walker",
-      "day": "Wed",
-      "period": "P6",
-      "room": "Auslan room"
-    },
-    {
-      "cls": "LA15",
-      "subj": "Auslan",
-      "spec": "Walker",
-      "day": "Thu",
-      "period": "P1",
-      "room": "Auslan room"
-    },
-    {
-      "cls": "LA21",
-      "subj": "Auslan",
-      "spec": "Walker",
-      "day": "Thu",
-      "period": "P3",
-      "room": "Auslan room"
-    },
-    {
-      "cls": "LA8",
-      "subj": "Auslan",
-      "spec": "Walker",
-      "day": "Thu",
-      "period": "P4",
-      "room": "Auslan room"
-    },
-    {
-      "cls": "LA9",
-      "subj": "Auslan",
-      "spec": "Walker",
-      "day": "Wed",
-      "period": "P3",
-      "room": "Auslan room"
-    },
-    {
-      "cls": "LA8",
-      "subj": "Performing Arts",
-      "spec": "Peak",
-      "day": "Wed",
-      "period": "P5",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA6",
       "subj": "Visual Art",
       "spec": "Carter",
       "day": "Mon",
-      "period": "P2",
-      "room": "Art room"
-    },
-    {
-      "cls": "LA6",
-      "subj": "Performing Arts",
-      "spec": "Peak",
-      "day": "Wed",
-      "period": "P1",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA9",
-      "subj": "Performing Arts",
-      "spec": "Peak",
-      "day": "Thu",
-      "period": "P6",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA9",
-      "subj": "Visual Art",
-      "spec": "Carter",
-      "day": "Wed",
-      "period": "P5",
-      "room": "Art room"
-    },
-    {
-      "cls": "LA15",
-      "subj": "Performing Arts",
-      "spec": "Peak",
-      "day": "Wed",
-      "period": "P6",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA21",
-      "subj": "Performing Arts",
-      "spec": "Peak",
-      "day": "Tue",
-      "period": "P4",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA18",
-      "subj": "Performing Arts",
-      "spec": "Peak",
-      "day": "Tue",
-      "period": "P2",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA14",
-      "subj": "Performing Arts",
-      "spec": "Peak",
-      "day": "Thu",
       "period": "P3",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA19",
-      "subj": "Performing Arts",
-      "spec": "Peak",
-      "day": "Tue",
-      "period": "P6",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA20",
-      "subj": "Performing Arts",
-      "spec": "Peak",
-      "day": "Thu",
-      "period": "P4",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA22",
-      "subj": "Performing Arts",
-      "spec": "Peak",
-      "day": "Thu",
-      "period": "P5",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA24",
-      "subj": "Performing Arts",
-      "spec": "Peak",
-      "day": "Wed",
-      "period": "P3",
-      "room": "Music room"
-    },
-    {
-      "cls": "LA8",
-      "subj": "Visual Art",
-      "spec": "Carter",
-      "day": "Wed",
-      "period": "P6",
-      "room": "Art room"
-    },
-    {
-      "cls": "LA18",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Mon",
-      "period": "P4",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA18",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Mon",
-      "period": "P5",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA18",
-      "subj": "Visual Art",
-      "spec": "Carter",
-      "day": "Wed",
-      "period": "P1",
-      "room": "Art room"
-    },
-    {
-      "cls": "LA19",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Wed",
-      "period": "P1",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA19",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Wed",
-      "period": "P2",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA21",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Wed",
-      "period": "P5",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA21",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Wed",
-      "period": "P6",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA23",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Tue",
-      "period": "P3",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA23",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Tue",
-      "period": "P4",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA22",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Tue",
-      "period": "P5",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA22",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Tue",
-      "period": "P6",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA20",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Tue",
-      "period": "P1",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA20",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Tue",
-      "period": "P2",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA24",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Fri",
-      "period": "P4",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA24",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Fri",
-      "period": "P5",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA14",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Mon",
-      "period": "P2",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA14",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Mon",
-      "period": "P3",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA15",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Fri",
-      "period": "P2",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA15",
-      "subj": "STEM",
-      "spec": "Lowndes",
-      "day": "Fri",
-      "period": "P3",
-      "room": "STEM Lab"
-    },
-    {
-      "cls": "LA23",
-      "subj": "Visual Art",
-      "spec": "Carter",
-      "day": "Mon",
-      "period": "P5",
-      "room": "Art room"
-    },
-    {
-      "cls": "LA20",
-      "subj": "Visual Art",
-      "spec": "Carter",
-      "day": "Mon",
-      "period": "P6",
-      "room": "Art room"
-    },
-    {
-      "cls": "LA14",
-      "subj": "Visual Art",
-      "spec": "Carter",
-      "day": "Tue",
-      "period": "P4",
       "room": "Art room"
     },
     {
@@ -753,23 +761,15 @@
       "subj": "Visual Art",
       "spec": "Carter",
       "day": "Tue",
-      "period": "P3",
+      "period": "P5",
       "room": "Art room"
     },
     {
       "cls": "LA16",
       "subj": "Visual Art",
       "spec": "Carter",
-      "day": "Tue",
-      "period": "P5",
-      "room": "Art room"
-    },
-    {
-      "cls": "LA15",
-      "subj": "Visual Art",
-      "spec": "Carter",
       "day": "Mon",
-      "period": "P4",
+      "period": "P2",
       "room": "Art room"
     },
     {
@@ -777,14 +777,6 @@
       "subj": "Visual Art",
       "spec": "Carter",
       "day": "Tue",
-      "period": "P2",
-      "room": "Art room"
-    },
-    {
-      "cls": "LA21",
-      "subj": "Visual Art",
-      "spec": "Carter",
-      "day": "Mon",
       "period": "P3",
       "room": "Art room"
     },
@@ -793,14 +785,22 @@
       "subj": "Visual Art",
       "spec": "Carter",
       "day": "Tue",
-      "period": "P1",
+      "period": "P2",
       "room": "Art room"
     },
     {
-      "cls": "LA17",
+      "cls": "LA14",
       "subj": "Visual Art",
       "spec": "Carter",
       "day": "Tue",
+      "period": "P6",
+      "room": "Art room"
+    },
+    {
+      "cls": "LA20",
+      "subj": "Visual Art",
+      "spec": "Carter",
+      "day": "Mon",
       "period": "P6",
       "room": "Art room"
     }

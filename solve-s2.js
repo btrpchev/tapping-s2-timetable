@@ -254,14 +254,16 @@ const prevP = p => TEACH[pIdx(p) - 1];
 const nextP = p => TEACH[pIdx(p) + 1];
 const isLowerPh = code => Math.max(...C[code].yrs) <= 3;   // Lower Primary = up to Yr 3
 const phaseOf = code => (Math.max(...C[code].yrs) >= 4 ? "U" : "L");
+// Graded early-period penalty (Brad: "even early morning learning is priority"):
+// a specialist lesson at P1 is worst, then P2, then P3; afternoons are free.
+const EARLY_W = { P1: 8, P2: 5, P3: 2, P4: 0, P5: 0, P6: 0 };
 function scoreCand(st, L, c) {
   let s = rand() * 10;
   const team = TEAM_OF[L.cls];
   // (item 1) reward releasing team-mates together -> shared collaboration DOTT
   if (team) { let m = 0; for (const x of TEAMS[team]) if (x !== L.cls) for (const p of c.periods) if (st.classAt[ck(x, c.d, p)]) m++; s += m * 9; }
-  // (item 4) discourage morning releases (P1-P3); harder for Lower Primary (Upper carries extras)
-  const morn = c.periods.filter(p => p === "P1" || p === "P2" || p === "P3").length;
-  s -= morn * (isLowerPh(L.cls) ? 7 : 2);
+  // (item 4 + early-morning priority) graded push out of P1 > P2 > P3; Lower Primary harder
+  s -= c.periods.reduce((a, p) => a + EARLY_W[p], 0) * (isLowerPh(L.cls) ? 2 : 1);
   // (item 3) Carter Visual Art: sit beside a same-phase class so she doesn't repack resources
   if (c.sp === "Carter") { const ph = phaseOf(L.cls);
     for (const p of c.periods) for (const adj of [prevP(p), nextP(p)]) {
@@ -273,14 +275,14 @@ function scoreCand(st, L, c) {
 }
 
 function chooseWindows() {
-  // MORE MORNING LEARNING (Brad): team meetings sit in the MORNING so specialist
-  // teaching capacity is kept for the afternoon (classes stay in for morning learning).
-  const artsP = choice(["P1", "P2", "P3"]);
-  // Peak's Events leadership: its own MORNING period on Tue-Thu. Never Friday P1 -
-  // that stays as her DOTT because she runs the whole-school assembly then (Brad).
+  // MORE MORNING LEARNING (Brad): specialist idle time (meetings, leadership, DOTT)
+  // stacks at P1 first, then P2, then P3 - teaching pushes as late as possible so
+  // classes keep the early morning with their own teacher. Meetings therefore sit at P1.
+  const artsP = "P1";
+  // Peak's Events leadership: its own period, earliest available on Tue-Thu. Never
+  // Friday P1 - that stays as her DOTT because she runs the assembly (Brad).
   let pl = null;
-  for (let i = 0; i < 40; i++) { const d = choice(["Tue", "Wed", "Thu"]), p = choice(["P1", "P2", "P3"]); if (d === "Wed" && p === artsP) continue; pl = { day: d, p }; break; }
-  if (!pl) return null;
+  for (const p of ["P1", "P2", "P3"]) { for (const d of shuffle(["Tue", "Wed", "Thu"])) { if (d === "Wed" && p === artsP) continue; pl = { day: d, p }; break; } if (pl) break; }
   return { Arts: { day: "Wed", p: artsP }, STEMPE: { day: "Thu", p: "P1" }, PeakLead: pl };
 }
 
@@ -387,8 +389,8 @@ function specBlocked0(st, sp, d, p) { // leadership-only (not DOTT). Carter Mon 
 function equitySpread(st) { const v = dottReport(st).filter(r => r.req != null && r.sp !== "Uhe").map(r => r.dott); return Math.max(...v) - Math.min(...v); }
 // (item 1) periods where 2+ team-mates share a release; all-3 counts triple
 function teamShared(st) { let n = 0; for (const cs of Object.values(TEAMS)) for (const d of DAYS) for (const p of TEACH) { const k = cs.filter(c => st.classAt[ck(c, d, p)]).length; if (k >= 2) n += (k === 3 ? 3 : 1); } return n; }
-// (item 4) morning (P1-P3) releases, Lower Primary weighted heavier
-function morningLoad(st) { let n = 0; for (const L of allPlaced(st)) for (const p of L.periods) if (p === "P1" || p === "P2" || p === "P3") n += isLowerPh(L.cls) ? 3 : 1; return n; }
+// (item 4 + early-morning priority) graded early load: P1 lessons cost most, then P2, P3
+function morningLoad(st) { let n = 0; for (const L of allPlaced(st)) for (const p of L.periods) n += EARLY_W[p] * (isLowerPh(L.cls) ? 2 : 1); return n; }
 // (item 3) Carter Visual Art same-phase adjacencies across her Mon-Wed
 function artAdj(st) { let n = 0; for (const d of ["Mon", "Tue", "Wed"]) for (let i = 0; i < TEACH.length - 1; i++) { const a = st.specAt[sk("Carter", d, TEACH[i])], b = st.specAt[sk("Carter", d, TEACH[i + 1])]; if (a && b && phaseOf(a.cls) === phaseOf(b.cls)) n++; } return n; }
 
@@ -402,8 +404,9 @@ for (let t = 0; t < TRIES; t++) {
   st.windows = w.all;
   const mon = allPlaced(st).filter(L => L.day === "Mon").length;
   const early = allPlaced(st).filter(L => L.spec !== "Uhe" && L.subj !== "PE").reduce((a, L) => a + L.periods.reduce((x, p) => x + pIdx(p), 0), 0);
-  // coordinated-redesign objective: team-shared DOTT up, morning load down, Art phase-aligned
-  const sc = 100000 - equitySpread(st) * 4 - mon * 2 + early + teamShared(st) * 18 - morningLoad(st) * 3 + artAdj(st) * 10;
+  // coordinated-redesign objective: team-shared DOTT up, early-morning teaching down
+  // (graded P1>P2>P3 - Brad: early morning learning is the priority), Art phase-aligned
+  const sc = 100000 - equitySpread(st) * 4 - mon * 2 + early + teamShared(st) * 18 - morningLoad(st) * 2 + artAdj(st) * 10;
   const dr = dottReport(st); const dottOK = dr.every(r => r.req == null || r.sp === "Uhe" || r.dott >= r.req);
   if (!dottOK) { if (sc > fbScore) { fbScore = sc; fb = st; } continue; }
   fDott++;
