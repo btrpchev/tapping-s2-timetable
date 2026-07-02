@@ -167,6 +167,6 @@ Whole-day ECE model (separate from the specialist grid). Kindy DOTT = 320 × FTE
 | Nikki Luca | PP | LA1 | 0.4 | 128m | 105m | -23m |
 | Kelly Duggan | Kindy | LA4 | 0.8 | 256m | 260m | +4m |
 | Donna Campbell | Kindy | T10 | 0.8 | 256m | 245m | -11m |
-| Fiona Dyer | Kindy | T9 | 0.6 | 192m | 215m | +23m |
+| Fiona Dyer | Kindy | T9 | 0.6 | 192m | 200m | +8m |
 | Anita Currion | Kindy | LA3 | 0.8 | 256m | 270m | +14m |
-Outstanding holes to assign: Nikki Luca needs one more DOTT period (and her 2nd working day confirmed); the small −6 to −11 min/wk residuals (Jenny, Caroline, Katie, Kelly, Donna) are tracked. Fiona is covered by Aaron Bell on a spare Friday period; Kelly/Donna/Anita are covered by Anita's free Monday.
+Tracked residuals: Nikki Luca sits -23 min/wk (Fri P5 Katie + Fri P6 Lis Lowndes = 105 vs 128); Brad pays this back outside the timetable. The small -6 to -11 min/wk residuals (Jenny, Caroline, Donna) are tracked. Fiona's Friday DOTT (P1) and Nikki's (P6) are both covered by Lis Lowndes; Kelly/Donna/Anita are covered by Anita's free Monday. No relief periods required.

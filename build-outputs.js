@@ -827,7 +827,7 @@ P("Whole-day ECE model (separate from the specialist grid). Kindy DOTT = 320 × 
 const eceLed = ECE.ledger();
 table(["Teacher", "Phase", "Room", "FTE", "Target/wk", "Achieved/wk", "Gap"],
   eceLed.map(r => [r.name, r.phase, r.room, r.fte, `${r.target}m`, `${r.weekly}m`, (r.gap >= 0 ? "+" : "") + r.gap + "m"]));
-P("Outstanding holes to assign: <b>Nikki Luca</b> needs one more DOTT period (and her 2nd working day confirmed); the small −6 to −11 min/wk residuals (Jenny, Caroline, Katie, Kelly, Donna) are tracked. Fiona is covered by Aaron Bell on a spare Friday period; Kelly/Donna/Anita are covered by Anita's free Monday.");
+P("Tracked residuals: <b>Nikki Luca</b> sits -23 min/wk (Fri P5 Katie + Fri P6 Lis Lowndes = 105 vs 128); Brad pays this back outside the timetable. The small -6 to -11 min/wk residuals (Jenny, Caroline, Donna) are tracked. Fiona's Friday DOTT (P1) and Nikki's (P6) are both covered by Lis Lowndes; Kelly/Donna/Anita are covered by Anita's free Monday. No relief periods required.");
 
 const summary = `<b>Summary:</b> 7/7 collaboration windows · Period 6 (every class released) · leadership 4/4 (Rose & Sirr-Davis get a real Bell-covered release) · Monday P0/P1 clear · subjects all exact · max 2 specialist periods per class per day (3 on a leadership day) · STEM back-to-back · PE all Thursday · PP & Kindy folded in (Week A/B).`;
 rep.html.unshift(`<p>${summary}</p>`); rep.md.unshift("> " + summary.replace(/<[^>]+>/g, ""));

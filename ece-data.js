@@ -17,7 +17,7 @@ const katieFri = split({ 5: C }, D);                 // P5 class (covers Nikki),
 const nikkiFri = split({ 5: D, 6: D }, "cov:Katie Digney"); // DOTT P5 (Katie teaches) + P6 (Lis Lowndes covers) = 105 min; -23 residual paid back outside the timetable (Brad)
 const kellyMon = split({ 5: D, 6: D }, C);           // P5,P6 dott (Anita covers)
 const donnaMon = split({ 3: D, 4: D }, C);           // P3,P4 dott (Anita covers)
-const fionaFri = split({ 6: D }, C);                 // P6 dott (Lowndes covers T9)
+const fionaFri = split({ 1: D }, C);                 // P1 dott (Lis Lowndes covers T9 during assembly); Fiona teaches P6 herself
 const anitaMon = ["dott", "dott", "dott", "cov:Donna Campbell", "cov:Donna Campbell", "cov:Kelly Duggan", "cov:Kelly Duggan"];
 
 const eceTeachers = [
@@ -48,7 +48,7 @@ const eceTeachers = [
   { name: "Fiona Dyer", phase: "Kindy", room: "T9", fte: 0.6,
     A: { Mon: rep(O), Tue: rep(O), Wed: rep(C), Thu: rep(C), Fri: fionaFri },
     B: { Mon: rep(O), Tue: rep(O), Wed: rep(D), Thu: rep(C), Fri: fionaFri },
-    note: "Whole-day DOTT odd-week (B) Wed. One Friday period DOTT covered by Aaron Bell." },
+    note: "Whole-day DOTT odd-week (B) Wed. Fri P1 DOTT covered by Lis Lowndes (during assembly); teaches her own P6." },
   { name: "Anita Currion", phase: "Kindy", room: "LA3", fte: 0.8,
     A: { Mon: anitaMon, Tue: rep(O), Wed: rep(C), Thu: rep(C), Fri: rep(C) },
     B: { Mon: anitaMon, Tue: rep(O), Wed: rep(D), Thu: rep(C), Fri: rep(C) },
@@ -67,13 +67,13 @@ const eceClasses = [
 
 const roomOf = name => (eceTeachers.find(t => t.name === name) || {}).room;
 
-// covers provided by NON-ECE staff into an ECE room.
-// `by` is the Year 1-6 specialist key (or "Relief" for a relief teacher); byName is for display.
-// Friday P1 is the whole-school assembly (no specialist lessons). Lis Lowndes's Friday P6 is
-// reserved in the solver so she can cover Nikki's LA1 DOTT then (one 60-min period; Katie
-// teaching P5 provides the other 45). Fiona's T9 DOTT (P6) is covered by a relief teacher.
+// covers provided by NON-ECE staff (Year 1-6 specialists) into an ECE room.
+// `by` is the Year 1-6 specialist key; byName is for display.
+// Friday P1 is the whole-school assembly (no Yr 1-6 specialist lessons), so Lis Lowndes
+// uses it to cover Fiona's T9 (45 min); her Fri P6 is reserved in the solver to cover
+// Nikki's LA1 DOTT (60 min; Katie teaching P5 provides Nikki's other 45). No relief needed.
 const externalCover = [
-  { room: "T9", day: "Fri", period: "P6", by: "Relief", byName: "Relief teacher", forName: "Fiona Dyer" },
+  { room: "T9", day: "Fri", period: "P1", by: "Lowndes", byName: "Lis Lowndes", forName: "Fiona Dyer" },
   { room: "LA1", day: "Fri", period: "P6", by: "Lowndes", byName: "Lis Lowndes", forName: "Nikki Luca" },
 ];
 
