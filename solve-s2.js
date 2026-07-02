@@ -273,12 +273,12 @@ function scoreCand(st, L, c) {
 }
 
 function chooseWindows() {
-  const artsP = choice(NON_P6.filter(p => p !== Y1_ANCHOR.p)); // keep Arts off the Y1 anchor slot
-  const peakDays = ["Tue", "Wed", "Thu", "Fri"];
-  let pl = null;
-  for (let i = 0; i < 40; i++) { const d = choice(peakDays), p = choice(NON_P6); if (d === "Wed" && p === artsP) continue; if (d === "Thu" && p === "P1") continue; pl = { day: d, p }; break; }
-  if (!pl) return null;
-  return { Arts: { day: "Wed", p: artsP }, STEMPE: { day: "Thu", p: "P1" }, PeakLead: pl };
+  // MORE MORNING LEARNING (Brad): team meetings sit in the MORNING so specialist
+  // teaching capacity is kept for the afternoon (classes stay in for morning learning).
+  const artsP = choice(["P1", "P2", "P3"]);
+  // Peak's Events leadership = Friday P1: she leads the assembly, and that period is
+  // already blocked for specialist teaching, so the block costs zero teaching capacity.
+  return { Arts: { day: "Wed", p: artsP }, STEMPE: { day: "Thu", p: "P1" }, PeakLead: { day: "Fri", p: "P1" } };
 }
 
 function buildOnce() {
