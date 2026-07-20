@@ -389,6 +389,18 @@ function specBlocked0(st, sp, d, p) { // leadership-only (not DOTT). Carter Mon 
 function equitySpread(st) { const v = dottReport(st).filter(r => r.req != null && r.sp !== "Uhe").map(r => r.dott); return Math.max(...v) - Math.min(...v); }
 // (item 1) periods where 2+ team-mates share a release; all-3 counts triple
 function teamShared(st) { let n = 0; for (const cs of Object.values(TEAMS)) for (const d of DAYS) for (const p of TEACH) { const k = cs.filter(c => st.classAt[ck(c, d, p)]).length; if (k >= 2) n += (k === 3 ? 3 : 1); } return n; }
+// HARD FLOOR (Brad): every team must have >=2 periods where all three teachers are
+// released together. Y4-5 is exempt - its three classes all ride Uhe's fixed staggered
+// STEM doubles, which makes a second full-team period structurally impossible.
+function teamFloorOK(st) {
+  for (const [t, cs] of Object.entries(TEAMS)) {
+    if (t === "Y4-5") continue;
+    let n = 0;
+    for (const d of DAYS) for (const p of TEACH) if (cs.every(c => st.classAt[ck(c, d, p)])) n++;
+    if (n < 2) return false;
+  }
+  return true;
+}
 // (item 4 + early-morning priority) graded early load: P1 lessons cost most, then P2, P3
 function morningLoad(st) { let n = 0; for (const L of allPlaced(st)) for (const p of L.periods) n += EARLY_W[p] * (isLowerPh(L.cls) ? 2 : 1); return n; }
 // (item 3) Carter Visual Art same-phase adjacencies across her Mon-Wed
@@ -401,6 +413,7 @@ for (let t = 0; t < TRIES; t++) {
   const st = buildOnce(); if (!st) continue;
   if (validate(st).length) continue; fValid++;
   const w = allWindows(st); if (!w.ok) continue; fWin++;
+  if (!teamFloorOK(st)) continue; // every team (except Y4-5) needs >=2 full-team shared periods
   st.windows = w.all;
   const mon = allPlaced(st).filter(L => L.day === "Mon").length;
   const early = allPlaced(st).filter(L => L.spec !== "Uhe" && L.subj !== "PE").reduce((a, L) => a + L.periods.reduce((x, p) => x + pIdx(p), 0), 0);

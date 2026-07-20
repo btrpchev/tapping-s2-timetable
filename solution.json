@@ -464,8 +464,8 @@
       "cls": "LA21",
       "subj": "Auslan",
       "spec": "Walker",
-      "day": "Wed",
-      "period": "P2",
+      "day": "Thu",
+      "period": "P1",
       "room": "Auslan room"
     },
     {
@@ -600,16 +600,16 @@
       "cls": "LA21",
       "subj": "STEM",
       "spec": "Lowndes",
-      "day": "Tue",
-      "period": "P3",
+      "day": "Wed",
+      "period": "P2",
       "room": "STEM Lab"
     },
     {
       "cls": "LA21",
       "subj": "STEM",
       "spec": "Lowndes",
-      "day": "Tue",
-      "period": "P4",
+      "day": "Wed",
+      "period": "P3",
       "room": "STEM Lab"
     },
     {
@@ -736,16 +736,16 @@
       "cls": "LA20",
       "subj": "STEM",
       "spec": "Lowndes",
-      "day": "Wed",
-      "period": "P2",
+      "day": "Tue",
+      "period": "P3",
       "room": "STEM Lab"
     },
     {
       "cls": "LA20",
       "subj": "STEM",
       "spec": "Lowndes",
-      "day": "Wed",
-      "period": "P3",
+      "day": "Tue",
+      "period": "P4",
       "room": "STEM Lab"
     },
     {

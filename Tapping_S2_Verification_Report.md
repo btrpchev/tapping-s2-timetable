@@ -10,7 +10,7 @@ Brief wording note: it refers in places to nine collaboration teams, but the enu
 | --- | --- | --- | --- |
 | Y1 | Tue P2 | LA22: Imogen Webb (Performing Arts/Peak); LA23: Ashlee Hutchings (STEM/Lowndes); LA24: Chloe Moore (Visual Art/Carter) | PASS |
 | Y2 | Thu P5 | LA18: Hannah Bouwmeester (PE/Lowndes); LA19: Savannah Espach (PE/Bell); LA20: Anna Hendron (PE/Pevitt) | PASS |
-| Y3-4 | Wed P2 | LA14: Olivia Sheehy (Performing Arts/Peak); LA15: Georgia Mitchell (Visual Art/Carter); LA21: Jasper Sirr-Davis (Auslan/Walker) | PASS |
+| Y3-4 | Wed P2 | LA14: Olivia Sheehy (Performing Arts/Peak); LA15: Georgia Mitchell (Visual Art/Carter); LA21: Jasper Sirr-Davis (STEM/Lowndes) | PASS |
 | Y4-5 | Thu P3 | LA7: Nicola Pigott (PE/Lowndes); LA16: Tanya Thieme (PE/Bell); LA17: Cassidy Law (PE/Pevitt) | PASS |
 | Y5-6 | Wed P5 | LA6: John Dunbar (Auslan/Walker); LA8: Janette Crisp (Performing Arts/Peak); LA9: Lincoln Rose (Visual Art/Carter) | PASS |
 | Arts | Wed P1 | Peak, Carter, Walker all on DOTT | PASS |
@@ -136,8 +136,8 @@ Hard rule (Brad): no class may receive more than two specialist periods on any s
 | LA17 | 1 | 1 | 2 | 2 | 0 | 2 |
 | LA18 | 2 | 2 | 0 | 1 | 2 | 2 |
 | LA19 | 0 | 1 | 2 | 2 | 1 | 2 |
-| LA20 | 1 | 0 | 2 | 2 | 1 | 2 |
-| LA21 | 1 | 2 | 2 | 1 | 1 | 2 |
+| LA20 | 1 | 2 | 0 | 2 | 1 | 2 |
+| LA21 | 1 | 0 | 3 | 2 | 1 | 3 (incl leadership) |
 | LA22 | 2 | 1 | 1 | 1 | 2 | 2 |
 | LA23 | 0 | 2 | 2 | 1 | 2 | 2 |
 | LA24 | 0 | 1 | 2 | 2 | 2 | 2 |
@@ -154,7 +154,7 @@ PE (rule 6): all PE is on Thursday, with the three PE teachers (Lowndes, Bell, J
 | P5 | LA18, LA19, LA20 | Lowndes / Bell / Pevitt |
 | P6 | LA22, LA23, LA24 | Lowndes / Bell / Pevitt |
 STEM (rule 5): every STEM block is two back-to-back periods (consecutive period numbers, same day): PASS.
-Specialist teaching by period (rule 7 aims to keep mornings lighter for literacy): P1:3  P2:18  P3:19  P4:19  P5:19  P6:18. Note Thursday PE necessarily fills some morning slots; the rest of the week is pushed later where the other hard rules allow.
+Specialist teaching by period (rule 7 aims to keep mornings lighter for literacy): P1:4  P2:17  P3:19  P4:19  P5:19  P6:18. Note Thursday PE necessarily fills some morning slots; the rest of the week is pushed later where the other hard rules allow.
 
 ## 10. Pre-Primary & Kindy DOTT ledger
 
